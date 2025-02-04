@@ -5,22 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2025 limjuhee portfolio</title>
   
+  <!-- 웹폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css">
+
   <link rel="stylesheet" href="./css/common/minireset.min.css">
   <link rel="stylesheet" href="./css/common/swiper-bundle.min.css">
+
+  <!-- 공통 css -->
+  <link rel="stylesheet" href="./css/common/base.css">
+  <link rel="stylesheet" href="./css/home.css">
+
 </head>
 <body>
 
   <!-- 헤더 영역 -->
-  <header class="header">
+  <header class="mo_blind">
+    <!-- 시간, 날짜 -->
+    <div class="header_flex">
+      <div class="time-container">
+        <div id="current-time" class="time"></div>
+        <div id="current-date" class="date"></div>
+      </div>
+  
+      <!-- 스테이터스바 -->
+      <div class="status_bar">
+        <div class="status">
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- 메인 영역 -->
-  <main></main>
+  <main>
+    <!-- 인터페이스 -->
+    <div class="first_interface">
+    </div>
+
+
+    <!-- 본문 시작 -->
+    <div class="main_interface">
+
+      <div class="top_interface">
+        <div class="main_txt">
+          <h1 class="fade_up">HELLO IT'S MY</h1>
+          <h1 class="fade_up">DESIGN PORTFLIO</h1>
+        </div>
+      </div>
+
+      <!-- 어바웃 미 -->
+      <div class="about">
+        <h1 class="fade_up">About Me</h1>
+      </div>
+
+      <!-- 프로젝트 -->
+      <div class="project">
+        <h1 class="fade_up">Project Section</h1>
+      </div>
+
+      <!-- 프로세스 -->
+    </div>
+  </main>
 
   <!-- 푸터 영역 -->
   <footer class="footer">
   </footer>
 
+  <!-- script -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="./js/common/base.js"></script>
+  <script src="./js/home.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,103 @@
+@charset "utf-8";
+:root {
+    --kr-font: 'Spoqa Han Sans Neo', -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+      'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      sans-serif;
+    --en-font: "Inter", Arial, Helvetica, sans-serif;
+    --bk-font: rgba(44, 44, 44, 1);
+    --blue : rgba(33, 129, 250, 1);
+  }
+
+body {font-family: var(--en-font);}
+body::-webkit-scrollbar {display: none;}
+
+.fade_up {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .fade_up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* header */
+header { color: var(--bk-font); position: fixed; top: 0; z-index: 90; height: 50px; line-height: 50px; width: 100vw; transition: color 0.3s, background-color 0.3s;}
+header .header_flex {width: 98%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
+.time-container {display: flex; gap: 20px; font-size: 0.9rem;}
+.status { width: 60px; height: 30px; background: url('../../asset/image/status_bk.png') no-repeat center/contain; transition: background-image 0.3s; }
+.scroll-active { color: #fff; }
+.scroll-active .status {background: url('../../asset/image/status_wt.png') no-repeat center/contain;}
+
+body {
+    overflow-x: hidden;
+  }
+  
+  .first_interface,
+  .main_interface {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  }
+  
+  .first_interface {
+    background: #ddd;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s ease-in-out;
+    cursor: pointer;
+    position: fixed;
+  }
+  
+  .main_interface {
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .top_interface {width: 100%; height: 100vh;}
+  .top_interface .main_txt {}
+  .top_interface .main_txt h1 {text-align: center; font-size: 6rem; font-weight: bold; line-height: 1.3;}
+  
+  .about {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .about h1 {font-size: 5rem; text-align: center; color: var(--bk-font); margin-top: 100px;}
+  
+  .project {
+    height: 200vh;
+    background: #000;
+    color: #fff;
+  }
+  
+
+/* PC (1024px 이상) */
+@media only screen and (min-width: 1024px) {
+    /* PC 전용 스타일 */
+    body {
+      
+    }
+  }
+  
+/* Tablet (768px ~ 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 태블릿 전용 스타일 */
+    body {
+      
+    }
+  }
+  
+/* Mobile (최대 767px) */
+@media only screen and (max-width: 767px) {
+    /* 모바일 전용 스타일 */
+    .mo_blind {display: none!important;}
+    body {
+      
+    }
+  }
