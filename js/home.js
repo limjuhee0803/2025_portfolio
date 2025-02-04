@@ -20,3 +20,30 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
+//캐릭터
+const eyes = document.querySelectorAll(".eye");
+let isMouseMoveEventActive = false;
+
+document.addEventListener("mousemove", (event) => {
+  if (!isMouseMoveEventActive) {
+    requestAnimationFrame(() => {
+      eyes.forEach((eye) => {
+        const rect = eye.getBoundingClientRect();
+        const eyeX = rect.left + rect.width / 2;
+        const eyeY = rect.top + rect.height / 2;
+
+        const deltaX = event.clientX - eyeX;
+        const deltaY = event.clientY - eyeY;
+        const angle = Math.atan2(deltaY, deltaX);
+
+        const moveX = Math.cos(angle) * 10;
+        const moveY = Math.sin(angle) * 10;
+
+        eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+      isMouseMoveEventActive = false;
+    });
+    isMouseMoveEventActive = true;
+  }
+});
