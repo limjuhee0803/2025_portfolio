@@ -65,3 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
   lenis.on("scroll", () => { /* 필요 시 스크롤 이벤트 추가 */ });
   requestAnimationFrame(raf);
 });
+
+// 새로고침 시 가장 위로 스크롤
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});

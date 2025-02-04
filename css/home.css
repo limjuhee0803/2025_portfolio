@@ -20,6 +20,7 @@ body {
   transition: transform 0.8s ease-in-out;
   cursor: pointer;
   position: fixed;
+  z-index: 91;
 }
 
 .main_interface {
@@ -29,7 +30,7 @@ body {
 }
 
 .top_interface {width: 100%; height: 100vh;}
-.top_interface .main_txt {}
+.top_interface .main_txt { margin-top: 300px;}
 .top_interface .main_txt h1 {text-align: center; font-size: 6rem; font-weight: bold; line-height: 1.3;}
 
 .about {

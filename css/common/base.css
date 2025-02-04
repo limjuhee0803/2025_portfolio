@@ -24,16 +24,49 @@ body::-webkit-scrollbar {display: none;}
   }
 
 /* header */
-header { color: var(--bk-font); position: fixed; top: 0; z-index: 90; height: 50px; line-height: 50px; width: 100vw; transition: color 0.3s, background-color 0.3s;}
+header { color: var(--bk-font); position: fixed; top: 0; z-index: 99; height: 50px; line-height: 50px; width: 100vw; transition: color 0.3s, background-color 0.3s;}
 header .header_flex {width: 98%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
 .time-container {display: flex; gap: 20px; font-size: 0.9rem;}
 .status { width: 60px; height: 30px; background: url('../../asset/image/status_bk.png') no-repeat center/contain; transition: background-image 0.3s; }
 .scroll-active { color: #fff; }
 .scroll-active .status {background: url('../../asset/image/status_wt.png') no-repeat center/contain;}
 
-body {
-    overflow-x: hidden;
+.menu-bar {
+    width: 450px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 애플 스타일 자연스러운 그림자 */
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 90;
   }
+
+  /* 메뉴 항목 스타일 */
+  .menu-bar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  /* 메뉴 활성화 상태 */
+  .menu-bar a.active {
+    background-color: #2181FA;
+    color: #ffffff;
+  }
+
+    body {
+        overflow-x: hidden;
+    }
   
   .first_interface,
   .main_interface {
