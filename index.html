@@ -39,8 +39,23 @@
 
   <!-- 메인 영역 -->
   <main>
+
+    <!-- 메뉴 -->
+    <nav class="menu-bar">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Work</a>
+      <a href="#">Process</a>
+    </nav>
+    
+    <div class="up">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#777777">
+        <path d="M460-200v-483.15L228.31-451.46 200-480l280-280 280 280-28.31 28.54L500-683.15V-200h-40Z"/>
+      </svg>
+    </div>
+
     <!-- 인터페이스 -->
-    <div class="first_interface">
+    <!-- <div class="first_interface">
 
       <div class="interface_bottom">
         <img src="./asset/image/first_interface_bottom.png" alt="아이폰 어플 모음">
@@ -57,15 +72,7 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- 메뉴 -->
-    <nav class="menu-bar">
-      <a href="#" class="active">Home</a>
-      <a href="#">About</a>
-      <a href="#">Work</a>
-      <a href="#">Process</a>
-    </nav>
+    </div> -->
 
     <!-- 본문 시작 -->
     <div class="main_interface">
@@ -84,24 +91,191 @@
 
       <!-- 어바웃 미 -->
       <div class="about">
-        <h1 class="fade_up">About Me</h1>
+
+        <div class="about_intro margin_section">
+          <div class="about_flex fade_up">
+            <h1>Who am I</h1>
+
+            <div class="about_text">
+              <h2>
+                I'm Lim Juhee, a continuously growing web publisher. With a relentless pursuit of achievement and a passion for embracing new challenges, I constantly strive for growth. Through excellent communication and flexibility, I lead successful projects to completion.
+              </h2>
+
+              <h3>
+                끊임없이 성장하는 웹퍼블리셔, 임주희입니다. 저는 성취를 위한 지속적인 노력과 새로운 도전에 대한 열정으로 항상 발전을 추구하며, 탁월한 소통과 융통성으로 성공적인 프로젝트를 이끌어 나갑니다.                
+              </h3>
+
+              <div class="view_more">
+                <a href="#"><h2>About Page</h2></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about_gray">
+          <div class="about_detail">
+            <!-- 오토 스와이퍼 -->
+            <div class="about_swiper">
+              <div class="swiper-container autoSwiper"> 
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./asset/image/home_about02.jpg" alt="M'S NUPTSE ON BALL JACKET">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./asset/image/home_about01.jpg" alt="W'S NUPTSE ON BALL JACKET">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./asset/image/home_about01.jpg" alt="M'S 1996 ECO NUPTSE JACKET">
+                    </div>
+                </div>  
+              </div>
+            </div>
+
+            <div class="bubble">
+              <h4 class="bubble01 lt_bubble">Responsibility</h4>
+              <h4 class="bubble02 lt_bubble">“주희씨가 우리 팀원이라 너무 다행이야”</h4>
+              <h4 class="bubble03 lt_bubble">Self-management</h4>
+              <h4 class="bubble04 lt_bubble">“It is a long established fact that a reader<br> will be distracted by the <br>readable content of a page when”</h4>
+              <h4 class="bubble05 rt_bubble">“너는 뭘 해도 될 애다”</h4>
+              <h4 class="bubble06 rt_bubble">“t is a long established<br>
+                fact that a reader will be”</h4>
+              <h4 class="bubble07 rt_bubble">Flexibility</h4>
+              <h4 class="bubble08 rt_bubble">Responsibility Responsibility</h4>
+              <h4 class="bubble09 rt_bubble">Responsibility</h4>
+            </div>
+          </div>
+  
+          <!-- 어바웃 장점 -->
+          <div class="about_point margin_section">
+            <ul class="about_box fade_up">
+              <li>
+                <img src="./asset/image/about_point02.png" alt="">
+                <h2>Creative Hobbies</h2>
+                <h3>드로잉, 영화 감상 등 창의적인 취미 활동은 스트레스 관리와 업무에 영감을 주는 중요한 원천이 됩니다.</h3>
+              </li>
+  
+              <li>
+                <img src="./asset/image/about_point02.png" alt="">
+                <h2>Time Management</h2>
+                <h3>시간 관리 능력은 제 강점으로, 정해진 시간 내에 업무를 효율적으로 마무리하고 지각하지 않는 것이 기본입니다.</h3>
+              </li>
+  
+              <li>
+                <img src="./asset/image/about_point02.png" alt="">
+                <h2>Communication</h2>
+                <h3>유연한 소통 능력은 효율적인 업무와 보다 더 원활한 협업을 이끌어내는 제 핵심 능력입니다.</h3>
+              </li>
+  
+              <li>
+                <img src="./asset/image/about_point02.png" alt="">
+                <h2>Precise and Fast Skills</h2>
+                <h3>섬세하고 빠른 작업 속도는 제 강점으로, 많은 칭찬을 
+                  받아왔으며, 제 열정과 집중력을 잘 보여줍니다.</h3>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- 스킬 flow -->
+          <div class="skill_flow">
+            <div class="marquee-wrapper">
+              <ul class="marquee">
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>HTML</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>CSS</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>JavaScript</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>jQuery</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Photoshop</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Illustrator</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Rhino</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>AutoCAD</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Keyshot</h2></li>
+              </ul>
+              <ul class="marquee">
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>HTML</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>CSS</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>JavaScript</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>jQuery</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Photoshop</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Illustrator</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Rhino</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>AutoCAD</h2></li>
+                <li><img src="./asset/image/keyshot.png" alt=""><h2>Keyshot</h2></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 프로젝트 -->
       <div class="project">
-        <h1 class="fade_up">Project Section</h1>
+        <div class="fix_contents">
+          <h1>MY PROJECTS</h1>
+          <div class="fade_up mockup">
+            <img src="./asset/image/main_mockup.png" alt="">
+          </div>
+        </div>
+
+        <div class="scroll_section">
+
+        </div>
       </div>
 
       <!-- 프로세스 -->
+
+      <!-- footer -->
+      <!-- <div class="footer">
+        <div class="footer_flex">
+          <div class="thanks">
+            <h3>Thank tou for reviewing my portfolio<br>
+            I look forward to connecting with you!</h3>
+          </div>
+    
+          <img src="./asset/image/footer_logo_test.png" alt="임주희 푸터용 캐릭터">
+    
+          <div class="contact mo_blind">
+            <h2>TEL. 010-3008-8240</h2>
+            <h3>limjuhee0803@naver.com</h3>
+          </div>
+        </div>
+    
+        <ul class="footer_link mo_blind">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Process</a></li>
+        </ul>
+      </div> -->
+       
     </div>
+
   </main>
 
   <!-- 푸터 영역 -->
-  <footer class="footer">
+  <footer>
+    <div class="footer_flex">
+      <div class="thanks">
+        <h3>Thank tou for reviewing my portfolio</h3>
+        <h3>I look forward to connecting with you!</h3>
+      </div>
+
+      <img src="./asset/image/footer_logo_test.png" alt="임주희 푸터용 캐릭터">
+
+      <div class="contact">
+        <h2>TEL. 010-3008-8240</h2>
+        <h3>limjuhee0803@naver.com</h3>
+      </div>
+    </div>
+
+    <ul class="footer_link mo_blind">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Process</a></li>
+    </ul>
   </footer>
 
   <!-- script -->
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/common/base.js"></script>
   <script src="./js/home.js"></script>
 </body>

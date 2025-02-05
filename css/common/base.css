@@ -9,12 +9,15 @@
     --blue : rgba(33, 129, 250, 1);
   }
 
-body {font-family: var(--en-font); overflow-x: hidden;}
+body {font-family: var(--en-font); overflow-x: hidden; color: var(--bk-font);}
 body::-webkit-scrollbar {display: none;}
+.margin_section {width: 90%; margin: 0 auto;}
+
+h1 {font-weight: bold;}
 
 /* 페이드업 효과 */
 .fade_up { opacity: 0; transform: translateY(80px); transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);}
-.fade_up.visible { opacity: 1;transform: translateY(0); }
+.fade_up.show { opacity: 1;transform: translateY(0); }
 
 /* header */
 header { color: var(--bk-font); position: fixed; top: 0; z-index: 99; height: 50px; line-height: 50px; width: 100vw; transition: color 0.3s, background-color 0.3s;}
@@ -25,14 +28,61 @@ header .header_flex {width: 98%; margin: 0 auto; display: flex; justify-content:
 .scroll-active .status {background: url('../../asset/image/status_wt.png') no-repeat center/contain;}
 
 /* menu */
-.menu-bar { width: 450px; height: 50px; display: flex; justify-content: space-around; align-items: center; background-color: #ffffff; border-radius: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); z-index: 49;}
+.menu-bar { width: 21%; height: 50px; display: flex; justify-content: space-around; align-items: center; background-color: #ffffff; border-radius: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); z-index: 49; transition: 0.5s;}
 .menu-bar a { text-decoration: none; color: #000; font-size: 0.9rem; font-weight: bold; padding: 7px 20px; border-radius: 20px; transition: all 0.3s ease; }
-/* 메뉴 활성화 상태 */
 .menu-bar a.active { background-color: var(--blue); color: #ffffff;}
 
 
+/* footer */
+footer {background-color: #fff; height: 230px; width: 100vw; position: fixed; bottom: 0; z-index: -1;}
+footer .footer_flex{display: flex; align-items: center; justify-content: space-between; width: 95%; margin: 50px auto;}
+footer .footer_flex .thanks{text-align: left;}
+footer .footer_flex .thanks h3{line-height: 1.5;}
+
+footer .footer_flex img{width: 80px;}
+
+footer .footer_flex .contact{text-align: right;}
+footer .footer_flex .contact h2{font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;}
+footer .footer_flex .contact h3{font-size: 1rem;}
+
+footer .footer_link{display: flex; gap: 3%; justify-content: center;}
+footer .footer_link li{}
+footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px solid #777777;}
+
+/* .view_more {background-color: var(--blue); color: #fff; height: 50px; line-height: 50px; padding: 5px 10px; border-radius: 20px;} */
+
+.up {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #d1d1d180;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999; /* 클릭 가능하도록 최상위로 배치 */
+}
+
+.up svg {
+  pointer-events: none; /* svg 내부 클릭 방지 */
+  transition: 0.3s;
+}
+
+/* 버튼을 hover했을 때 스타일 추가 (옵션) */
+.up:hover {
+  background-color: #d1d1d1; /* hover 시 색상 변화 */
+}
+
+
+.view_more h2 {background-color: var(--blue); color: #fff; height: 40px; line-height: 40px!important;; padding: 0 20px; border-radius: 20px; display: inline-block; transition: 0.3s;}
+
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
+
+  .view_more h2:hover {box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
 
   }
   
@@ -45,4 +95,7 @@ header .header_flex {width: 98%; margin: 0 auto; display: flex; justify-content:
 @media only screen and (max-width: 767px) {
     .mo_blind {display: none!important;}
 
+    /* menu */
+  .menu-bar { width: 90%;}
+  .menu-bar a {padding: 7px 10px;}
   }

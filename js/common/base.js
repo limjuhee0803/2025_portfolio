@@ -1,3 +1,41 @@
+// 새로고침 시 가장 위로 스크롤
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
+//부드러운 스크롤
+document.addEventListener("DOMContentLoaded", function () {
+  if (!window.lenisInstance) {
+    const lenis = new Lenis({
+      duration: 4,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    window.lenisInstance = lenis;
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }
+});
+
+//up 버튼
+document.addEventListener("DOMContentLoaded", function () {
+  const upButton = document.querySelector('.up');
+
+  if (upButton) {
+    upButton.addEventListener('click', function () {
+      if (window.lenisInstance) {
+        window.lenisInstance.scrollTo(0, { duration: 2 });
+      }
+    });
+  }
+});
+
+
 // 날짜와 시간 업데이트 함수
 function updateTimeAndDate() {
   const now = new Date();
@@ -29,44 +67,53 @@ function updateTimeAndDate() {
 setInterval(updateTimeAndDate, 1000);
 updateTimeAndDate();
 
-// Lenis + IntersectionObserver 코드 분리
-document.addEventListener("DOMContentLoaded", function () {
-  const lenis = new Lenis({
-    duration: 1.5,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+
+//스크롤 이벤트
+const fadeUpObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      fadeUpObserver.unobserve(entry.target); // 이미 보인 요소는 다시 감지하지 않음
+    }
   });
+}, { threshold: 0.1 });
 
-  const fadeUpElements = document.querySelectorAll(".fade_up");
+document.querySelectorAll('.fade_up').forEach(el => fadeUpObserver.observe(el));
 
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px 0px -10% 0px",
-    threshold: 0.1,
-  };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+//푸터가 시작되면 메뉴바가 사라짐
+/*
+const menuBar = document.querySelector('.menu-bar');
+const footer = document.querySelector('footer');
 
-  fadeUpElements.forEach((element) => {
-    observer.observe(element);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      menuBar.style.opacity = '0';
+      menuBar.style.visibility = 'hidden';
+      menuBar.style.pointerEvents = 'none';
+    } else {
+      menuBar.style.opacity = '1';
+      menuBar.style.visibility = 'visible';
+      menuBar.style.pointerEvents = 'auto';
+    }
   });
+}, { threshold: 0.1 });
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+observer.observe(footer);
+*/
+
+
+// main_interface의 끝에서 5% 남았을 때 메뉴바 사라지게
+window.addEventListener('scroll', function() {
+  const mainInterface = document.querySelector('.main_interface');
+  const menuBar = document.querySelector('.menu-bar');
+  const mainInterfaceHeight = mainInterface.offsetHeight;
+  const scrollPosition = window.scrollY + window.innerHeight;
+  
+  if (scrollPosition >= mainInterface.offsetTop + mainInterfaceHeight * 0.95) {
+    menuBar.style.opacity = 0;
+  } else {
+    menuBar.style.opacity = 1;
   }
-
-  lenis.on("scroll", () => { /* 필요 시 스크롤 이벤트 추가 */ });
-  requestAnimationFrame(raf);
-});
-
-// 새로고침 시 가장 위로 스크롤
-window.addEventListener('beforeunload', () => {
-  window.scrollTo(0, 0);
 });
