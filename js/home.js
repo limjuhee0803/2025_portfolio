@@ -102,4 +102,33 @@ window.addEventListener('scroll', function() {
   }
 });
 
+//fix_contents
+document.addEventListener('DOMContentLoaded', function () {
+  const fixContents = document.querySelector('.fix_contents');
+  const scrollSection = document.querySelector('.scroll_section');
+
+  // 페이지가 로드된 후에 .blur_effect 클래스가 추가되지 않도록 하기 위해
+  fixContents.classList.remove('blur_effect'); // 초기 상태에서 제거
+
+  if (!scrollSection) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        fixContents.classList.add('blur_effect');
+      }
+    });
+  }, {
+    root: null, // 기본 root로 설정 (viewport)
+    threshold: 0.1,  // 10% 이상 보일 때 trigger
+    rootMargin: '0px 0px -10% 0px'  // 화면 하단 10%가 보일 때
+  });
+
+  observer.observe(scrollSection);
+});
+
+
+
+
+
 

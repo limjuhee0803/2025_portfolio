@@ -16,8 +16,18 @@ body::-webkit-scrollbar {display: none;}
 h1 {font-weight: bold;}
 
 /* 페이드업 효과 */
-.fade_up { opacity: 0; transform: translateY(80px); transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);}
-.fade_up.show { opacity: 1;transform: translateY(0); }
+.fade_up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: opacity, transform;
+}
+
+.fade_up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* header */
 header { color: var(--bk-font); position: fixed; top: 0; z-index: 99; height: 50px; line-height: 50px; width: 100vw; transition: color 0.3s, background-color 0.3s;}

@@ -1,7 +1,9 @@
 // 새로고침 시 가장 위로 스크롤
+/*
 window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
+*/
 
 //부드러운 스크롤
 document.addEventListener("DOMContentLoaded", function () {
@@ -76,9 +78,13 @@ const fadeUpObserver = new IntersectionObserver((entries) => {
       fadeUpObserver.unobserve(entry.target); // 이미 보인 요소는 다시 감지하지 않음
     }
   });
-}, { threshold: 0.1 });
+}, { 
+  threshold: 0.5, // 요소가 절반 이상 보일 때 감지
+  rootMargin: '0px 0px -50px 0px' // 하단 여백 조정
+});
 
 document.querySelectorAll('.fade_up').forEach(el => fadeUpObserver.observe(el));
+
 
 
 //푸터가 시작되면 메뉴바가 사라짐
