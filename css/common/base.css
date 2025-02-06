@@ -9,7 +9,7 @@
     --blue : rgba(33, 129, 250, 1);
   }
 
-body {font-family: var(--en-font); overflow-x: hidden; color: var(--bk-font);}
+body {font-family: var(--en-font); overflow-x: hidden; color: var(--bk-font); word-break: keep-all;}
 body::-webkit-scrollbar {display: none;}
 .margin_section {width: 90%; margin: 0 auto;}
 
@@ -98,12 +98,12 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-
+  .tablet_blind {display: none!important;}
   }
   
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
-    .mo_blind {display: none!important;}
+  .mo_blind {display: none!important;}
 
     /* menu */
   .menu-bar { width: 90%;}
