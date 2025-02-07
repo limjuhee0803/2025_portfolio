@@ -3,24 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2025 limjuhee portfolio_About Page</title>
+  <title>2025 limjuhee portfolio_work</title>
   
+  <!-- 웹폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css">
+
   <link rel="stylesheet" href="./css/common/minireset.min.css">
   <link rel="stylesheet" href="./css/common/swiper-bundle.min.css">
+
+  <!-- 공통 css -->
+  <link rel="stylesheet" href="./css/common/base.css">
+
+  <link rel="stylesheet" href="./css/about.css">
+
 </head>
 <body>
+  <div class="cursor-circle"></div>
 
   <!-- 헤더 영역 -->
-  <header class="header">
+  <header class="mo_blind">
+    <!-- 시간, 날짜 -->
+    <div class="header_flex">
+      <div class="time-container">
+        <div id="current-time" class="time"></div>
+        <div id="current-date" class="date"></div>
+      </div>
+  
+      <!-- 스테이터스바 -->
+      <div class="status_bar">
+        <div class="status">
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- 메인 영역 -->
-  <main></main>
+  <main>
+
+    <!-- 메뉴 -->
+    <nav class="menu-bar">
+      <a href="./index.html">Home</a>
+      <a href="./about.html" class="active">About</a>
+      <a href="./work.html">Work</a>
+      <a href="./process.html">Process</a>
+    </nav>
+    
+    <div class="up mo_blind">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#777777">
+        <path d="M460-200v-483.15L228.31-451.46 200-480l280-280 280 280-28.31 28.54L500-683.15V-200h-40Z"/>
+      </svg>
+    </div>
+
+    <!-- 본문 시작 -->
+    <div class="main_interface">
+
+      <!-- 포트폴리오 표지 -->
+      <div class="top_interface">
+      </div>
+
+
+
+    </div>
+
+  </main>
 
   <!-- 푸터 영역 -->
-  <footer class="footer">
+  <footer class="bk_footer">
+    <div class="footer_flex">
+      <div class="thanks">
+        <h3>Thank tou for reviewing my portfolio</h3>
+        <h3>I look forward to connecting with you!</h3>
+      </div>
+
+      <img src="./asset/image/footer_logo_test02.png" alt="임주희 푸터용 캐릭터">
+
+      <div class="contact mo_blind">
+        <h2>TEL. 010-3008-8240</h2>
+        <h3>limjuhee0803@naver.com</h3>
+      </div>
+    </div>
+
+    <ul class="footer_link mo_blind">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="./work.html">Work</a></li>
+      <li><a href="#">Process</a></li>
+    </ul>
   </footer>
 
+  <!-- script -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./js/common/base.js"></script>
 </body>
 
 </html>

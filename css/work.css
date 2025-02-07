@@ -1,0 +1,21 @@
+@charset "utf-8";
+.main_interface { width: 100vw; height: 300vh; background: #fff; transition: transform 0.8s ease-in-out; margin-bottom: 230px; border-radius: 0 0 40px 40px;}
+
+/* 메인 표지 */
+.top_interface {width: 100%; height: 100vh; position: relative;}
+
+/* PC (1024px 이상) */
+@media only screen and (min-width: 1024px) {
+
+
+  }
+  
+/* Tablet (768px ~ 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  }
+  
+
+/* Mobile (최대 767px) */
+@media only screen and (max-width: 767px) {
+
+  }

@@ -59,6 +59,8 @@ footer .footer_link{display: flex; gap: 3%; justify-content: center;}
 footer .footer_link li{}
 footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px solid #777777;}
 
+.bk_footer {background-color: #111111; color: #fff;} 
+
 /* .view_more {background-color: var(--blue); color: #fff; height: 50px; line-height: 50px; padding: 5px 10px; border-radius: 20px;} */
 
 .up { width: 45px; height: 45px; border-radius: 50%; background-color: #d1d1d180; position: fixed; bottom: 5%; right: 5%; display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 9999; /* 클릭 가능하도록 최상위로 배치 */}
