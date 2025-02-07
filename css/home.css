@@ -47,8 +47,8 @@
 
 .about .about_intro {padding: 150px 0; border-top: 1px solid #F4F4F4;}
 .about .about_intro .about_flex{display: flex; align-items: first baseline;}
-.about .about_intro .about_flex h1{ width: 20%; font-size: 3rem; }
-.about .about_intro .about_flex .about_text{ width: 50%;}
+.about .about_intro .about_flex h1{ font-size: 3rem; padding: 0 5% 0 0;}
+.about .about_intro .about_flex .about_text{ width:70%;}
 .about .about_intro .about_flex .about_text h2{font-weight: 500; font-size: 1.3rem; line-height: 1.9;}
 .about .about_intro .about_flex .about_text h2 strong{background-color: rgba(33, 129, 250, 0.2); padding:  2px 5px;}
 .about .about_intro .about_flex .about_text h3{font-size: 1.1rem; margin-top: 20px; font-family: var(--kr-font); line-height: 1.6; color: #777777;}
@@ -182,7 +182,7 @@
 
 .project .project_section .project_text {display: flex; flex-direction: column;}
 .project .project_section .project_text h2{font-size: 2rem; margin-bottom: 10px; font-weight: bold;}
-.project .project_section .project_text h3{font-size: 0.9rem; margin-bottom: 20px; width: 60%; line-height: 1.6;}
+.project .project_section .project_text h3{font-size: 0.9rem; margin-bottom: 20px; width: 70%; line-height: 1.6;}
 .project .project_section .project_text .project_keyword{ display: flex; gap: 10px;}
 .project .project_section .project_text .project_keyword li{border: #777777 1px solid; color: #777777; padding: 5px 20px; border-radius: 20px;}
 
