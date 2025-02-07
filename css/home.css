@@ -186,10 +186,7 @@
 .project .rt_project .project_img{ order: 1;}
 .project .rt_project .project_text{text-align: right; order: 0; align-items: end;}
 
-.process {width: 100%; height: 100vh;}
-.process h1{ font-size: 6rem; margin-top: 30%}
-
-.process .process_box { background-color: #fff; width: 40%; margin: 60px auto 0; color: var(--bk-font); padding: 2% 0; border-radius: 20px;}
+/* .process .process_box { background-color: #fff; width: 40%; margin: 60px auto 0; color: var(--bk-font); padding: 2% 0; border-radius: 20px;}
 .process .process_box .process_title{}
 .process .process_box .process_title h2{font-size: 1.5rem; font-weight: bold;}
 .process .process_box .process_title h3{font-size: 1rem; margin-top: 20px;}
@@ -204,8 +201,17 @@
 .process .process_box .process_btn .going_btn h3{padding: 15px 0; font-size: 1rem; font-weight: bold;}
 
 .process .process_box .process_btn .keep{background-color: #F4F4F4;}
-.process .process_box .process_btn .process_page{background-color: var(--blue); color: #fff;}
+.process .process_box .process_btn .process_page{background-color: var(--blue); color: #fff;} */
 
+.process {}
+.process .process_title{display: flex; justify-content: space-between; margin-top: 30%; align-items: center;}
+.process h1 {text-align: left; font-size: 4rem;}
+.process .process_swiper {margin: 50px 0 100px; position: relative;}
+.process .process_swiper img {border-radius: 20px; transition: 0.3s;}
+.process .process_txt {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;}
+.process .process_txt h3{font-size: 1.5rem; font-weight: bold; transition: 0.3s;}
+.process .process_swiper .swiper-slide {overflow: hidden; border-radius: 20px;}
+.process .process_swiper .autoSwiper02 {overflow: hidden;}
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
@@ -219,16 +225,48 @@
   .project .project_section .project_img a img {transition: 0.3s;}
   .project .project_section .project_img:hover a img {filter: brightness(0.5) blur(2px);}
 
+  .process .process_txt h3{filter: opacity(0);}
+  .process .process_swiper:hover .process_txt h3 {filter: opacity(1);}
+  .process .process_swiper:hover img {filter: brightness(0.5) blur(1px);}
+
+
   }
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     
+  .about .about_intro .about_flex {flex-direction: column;}
 
   }
   
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
+  .top_interface {height: 50vh;}
+
   .top_interface .main_txt h1 {font-size: 2rem;}
+
+  .about .about_intro .about_flex {flex-direction: column;}
+  .about .about_point .about_box {flex-wrap: wrap; justify-content: center; gap: 0;}
+  .about .about_point .about_box li {width: 44%; margin: 10px;}
+  .about .about_point .about_box li h2 {text-align: center;}
+  .about .about_intro .about_flex h1 {width: 100%;}
+  .about .about_intro .about_flex .about_text {width: 100%;}
+
   .first_interface .interface_bottom {width: 90%;}
+
+  .project .fix_contents h1 {font-size: 3rem;}
+  .project .project_section {flex-direction: column;}
+  .project .project_section .project_img {width: 100%; margin: 0 auto;}
+  .project .project_section .project_text {width: 100%; margin: 0 auto;}
+
+  .project .project_section .project_text h2 {font-size: 1.2rem;}
+  .project .project_section .project_text h3 {width: 100%;}
+  .project .project_section .project_text .project_keyword {font-size: 0.8rem;}
+
+  .project .rt_project .project_img{ order: 0;}
+  .project .rt_project .project_text{order: 1;}
+
+  .process h1 {font-size: 2rem}
+  .process .process_swiper {width: 100%;}
+  .process .process_swiper img {width: 100%;}
   }

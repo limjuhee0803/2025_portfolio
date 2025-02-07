@@ -81,6 +81,24 @@ function autoSwiper(){
     });
 }
 
+autoSwiper02();
+function autoSwiper02() {
+    const auto_Sw02 = document.getElementsByClassName("autoSwiper02");
+    let arr_slide02 = Array.from(auto_Sw02);
+    arr_slide02.forEach((ele, idx, array) => {
+        array[idx].classList.add("type02_" + idx);
+
+        new Swiper('.type02_' + idx, {
+            effect: 'fade',
+            loop: true,
+            speed: 300,  // 더 빠른 전환 속도
+            autoplay: {
+                delay: 1000,  // 더 짧은 대기 시간
+            },
+        });
+    });
+}
+
 //말풍선 효과
 window.addEventListener('scroll', function() {
   const aboutGray = document.querySelector('.about_gray');
@@ -129,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //process 스와이퍼
+/*
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2.5,
   spaceBetween: 10,
@@ -144,6 +163,4 @@ var swiper = new Swiper(".mySwiper", {
     }
 }
 });
-
-
-
+*/
