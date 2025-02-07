@@ -59,7 +59,7 @@
 .about .about_detail .about_swiper {width: 40%; margin: 0 auto; padding: 150px 0;}
 .about .about_detail .about_swiper img {border-radius: 10px;}
 
-.about_detail .bubble h4 { opacity: 0; color: #fff; background-color: var(--blue); border-radius: 20px; display: inline-block; padding: 10px 20px; transform: translateY(20px); transition: opacity 1s, transform 1s; position: absolute;}
+.about_detail .bubble h4 { opacity: 0; color: #fff; background-color: var(--blue); border-radius: 20px; display: inline-block; padding: 10px 20px; transform: translateY(20px); transition: opacity 1s, transform 1s; position: absolute; text-align: center;}
 
 .rt_bubble::after , .lt_bubble::after {
   content: '';
@@ -83,11 +83,11 @@
 
 .bubble01 { top: 22%; left: 25%; filter: opacity(0.5);}
 .bubble02 {top: 39%; left: 16%; z-index: 5;}
-.bubble03 {top: 76%; left: 27%; z-index: 5;}
+.bubble03 {top: 72%; left: 27%; z-index: 5;}
 .bubble04 {top: 56%; left: 18%; filter: opacity(0.2);}
 .bubble05 {top: 23%; right: 23%; z-index: 5;}
 .bubble06 {top: 34%; right: 15%; filter: opacity(0.1);}
-.bubble07 {top: 45%; right: 26%; filter: opacity(0.7);}
+.bubble07 {top: 45%; right: 23.5%; filter: opacity(0.7);}
 .bubble08 {top: 58%; right: 20%; z-index: 5;}
 .bubble09 {top: 76%; right: 20%; filter: opacity(0.5);}
 
@@ -167,7 +167,7 @@
 .project .fix_contents .mockup .view_more {position: absolute; top: 40%; left: 50%; transform: translateX(-50%); filter: opacity(0); transition: 0.3s;} */
 
 .project .fix_contents { position: relative;}
-.project .fix_contents .mockup{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.project .fix_contents .mockup{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30%;}
 .project .fix_contents img{ margin: 0 auto; transition: 0.3s;}
 .project .fix_contents h1{ font-weight: bold; font-size: 6rem; margin-top: 10%;}
 
@@ -182,7 +182,7 @@
 
 .project .project_section .project_text {display: flex; flex-direction: column;}
 .project .project_section .project_text h2{font-size: 2rem; margin-bottom: 10px; font-weight: bold;}
-.project .project_section .project_text h3{font-size: 0.9rem; margin-bottom: 20px; width: 70%; line-height: 1.6;}
+.project .project_section .project_text h3{font-size: 1rem; margin-bottom: 20px; width: 70%; line-height: 1.6; font-family: var(--kr-font);}
 .project .project_section .project_text .project_keyword{ display: flex; gap: 10px;}
 .project .project_section .project_text .project_keyword li{border: #777777 1px solid; color: #777777; padding: 5px 20px; border-radius: 20px;}
 
@@ -217,8 +217,8 @@
 .process h1 {text-align: left; font-size: 4rem;}
 .process .process_swiper {margin: 50px 0 100px; position: relative; width: 100%;}
 .process .process_swiper img {border-radius: 20px; transition: 0.3s;}
-.process .process_txt {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;}
-.process .process_txt h3{font-size: 1.5rem; font-weight: bold; transition: 0.3s;}
+/* .process .process_txt {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;} */
+.process .process_txt h3{font-size: 1.5rem; margin-top: 60px; transition: 0.3s;}
 .process .process_swiper .swiper-slide {overflow: hidden; border-radius: 20px;}
 .process .process_swiper .autoSwiper02 {overflow: hidden;}
 
@@ -234,16 +234,16 @@
   .project .project_section .project_img a img {transition: 0.3s;}
   .project .project_section .project_img:hover a img {filter: brightness(0.5) blur(2px);}
 
-  .process .process_txt h3{filter: opacity(0);}
+  /* .process .process_txt h3{filter: opacity(0);}
   .process .process_swiper:hover .process_txt h3 {filter: opacity(1);}
-  .process .process_swiper:hover img {filter: brightness(0.5) blur(1px);}
+  .process .process_swiper:hover img {filter: brightness(0.5) blur(1px);} */
 
 
   }
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
-  .about .about_intro .about_flex h1 {width: 30%;}
+  /* .about .about_intro .about_flex h1 {width: 30%;} */
   .about .about_intro .about_flex .about_text {width: 67%;}
 
   .about .about_detail .about_swiper {width: 70%;}
@@ -288,17 +288,17 @@
 
   .project .project_section .project_text h2 {font-size: 1.2rem;}
   .project .project_section .project_text h3 {width: 100%;}
-  .project .project_section .project_text .project_keyword {font-size: 0.8rem;}
+  .project .project_section .project_text .project_keyword {font-size: 0.7rem;}
 
   .project .rt_project .project_img{ order: 0;}
   .project .rt_project .project_text{order: 1;}
 
   .project .fix_contents.blur_effect {filter: none;}
 
-  .process h1 {font-size: 2rem}
+  .process h1 {font-size: 1.5rem}
   .process .process_swiper img {width: 100%; filter: brightness(0.5);}
 
   .process .process_txt {width: 100%;}
-  .process .process_txt h3 {font-size: 1rem}
+  .process .process_txt h3 {font-size: 0.9rem}
   .process .process_swiper {margin: 50px 0 0;}
   }
