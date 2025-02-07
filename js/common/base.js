@@ -6,6 +6,7 @@ window.addEventListener('beforeunload', () => {
 */
 
 //부드러운 스크롤
+/*
 document.addEventListener("DOMContentLoaded", function () {
   if (!window.lenisInstance) {
     const lenis = new Lenis({
@@ -23,6 +24,26 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(raf);
   }
 });
+*/
+document.addEventListener("DOMContentLoaded", function () {
+  // 화면 크기가 모바일보다 클 때만 lenis 실행 (모바일 기준을 768px로 설정)
+  if (window.innerWidth > 768 && !window.lenisInstance) {
+    const lenis = new Lenis({
+      duration: 4,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    window.lenisInstance = lenis;
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }
+});
+
 
 //up 버튼
 document.addEventListener("DOMContentLoaded", function () {
