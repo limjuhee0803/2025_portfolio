@@ -68,14 +68,14 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
 .view_more h2 {background-color: var(--blue); color: #fff; height: 40px; line-height: 40px!important;; padding: 0 20px; border-radius: 20px; display: inline-block; transition: 0.3s;}
 
 /* PC (1024px 이상) */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
 
   .view_more h2:hover {box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
 
   }
   
 /* Tablet (768px ~ 1023px) */
-@media only screen and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
   .tablet_blind {display: none!important;}
 
   .menu-bar {width: 45%;}
