@@ -116,10 +116,13 @@ window.addEventListener('scroll', function() {
   const menuBar = document.querySelector('.menu-bar');
   const mainInterfaceHeight = mainInterface.offsetHeight;
   const scrollPosition = window.scrollY + window.innerHeight;
-  
+
   if (scrollPosition >= mainInterface.offsetTop + mainInterfaceHeight * 0.95) {
+    menuBar.style.transition = 'opacity 0.3s ease-out'; // 부드러운 전환 추가
     menuBar.style.opacity = 0;
   } else {
+    menuBar.style.transition = 'opacity 0.3s ease-in'; // 부드러운 전환 추가
     menuBar.style.opacity = 1;
   }
 });
+
