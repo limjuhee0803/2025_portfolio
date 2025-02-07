@@ -91,4 +91,5 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
 
   footer .footer_flex {flex-direction: column;}
   footer .footer_flex .thanks {order: 1;}
+  footer .footer_flex img {margin-bottom: 30px;}
   }

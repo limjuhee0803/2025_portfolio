@@ -121,6 +121,7 @@ window.addEventListener('scroll', function() {
 });
 
 //fix_contents
+/*
 document.addEventListener('DOMContentLoaded', function () {
   const fixContents = document.querySelector('.fix_contents');
   const scrollSection = document.querySelector('.scroll_section');
@@ -144,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   observer.observe(scrollSection);
 });
+*/
 
 
 //process 스와이퍼

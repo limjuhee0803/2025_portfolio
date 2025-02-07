@@ -157,8 +157,17 @@
 /* project */
 .project { background: #111111; color: #fff; text-align: center; padding: 150px 0 100px; border-radius: 0 0 40px 40px;}
 
-.project .fix_contents {position: sticky; top: 36%; filter: none;}
+/* .project .fix_contents {position: sticky; top: 36%; filter: none;}
 .project .fix_contents .mockup{position: absolute; top: -140%; left: 35%;}
+.project .fix_contents img{ margin: 0 auto; transition: 0.3s;}
+.project .fix_contents h1{ font-weight: bold; font-size: 6rem; margin-top: 10%;}
+
+.project .fix_contents.blur_effect {filter: opacity(0.2) blur(7px); transition: filter 0.3s ease;}
+
+.project .fix_contents .mockup .view_more {position: absolute; top: 40%; left: 50%; transform: translateX(-50%); filter: opacity(0); transition: 0.3s;} */
+
+.project .fix_contents { position: relative;}
+.project .fix_contents .mockup{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .project .fix_contents img{ margin: 0 auto; transition: 0.3s;}
 .project .fix_contents h1{ font-weight: bold; font-size: 6rem; margin-top: 10%;}
 
@@ -166,7 +175,7 @@
 
 .project .fix_contents .mockup .view_more {position: absolute; top: 40%; left: 50%; transform: translateX(-50%); filter: opacity(0); transition: 0.3s;}
 
-.project .scroll_section {padding-top: 5%; margin-top: 20%; position: relative; z-index: 2; }
+.project .scroll_section {margin-top: 17%; position: relative; z-index: 2; }
 .project .project_section { display: flex; gap: 5%; align-items: center; margin-bottom: 7%;}
 .project .project_section .project_img{}
 .project .project_section .project_img img{border-radius: 20px;}
@@ -204,9 +213,9 @@
 .process .process_box .process_btn .process_page{background-color: var(--blue); color: #fff;} */
 
 .process {}
-.process .process_title{display: flex; justify-content: space-between; margin-top: 30%; align-items: center;}
+.process .process_title{display: flex; justify-content: space-between; margin-top: 15%; align-items: center;}
 .process h1 {text-align: left; font-size: 4rem;}
-.process .process_swiper {margin: 50px 0 100px; position: relative;}
+.process .process_swiper {margin: 50px 0 100px; position: relative; width: 100%;}
 .process .process_swiper img {border-radius: 20px; transition: 0.3s;}
 .process .process_txt {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;}
 .process .process_txt h3{font-size: 1.5rem; font-weight: bold; transition: 0.3s;}
@@ -245,18 +254,29 @@
 
   .top_interface .main_txt h1 {font-size: 2rem;}
 
-  .about .about_intro .about_flex {flex-direction: column;}
+  .about .about_intro {padding: 50px 0;}
+  .about .about_intro .about_flex {flex-direction: column; gap: 30px;}
   .about .about_point .about_box {flex-wrap: wrap; justify-content: center; gap: 0;}
-  .about .about_point .about_box li {width: 44%; margin: 10px;}
-  .about .about_point .about_box li h2 {text-align: center;}
+  .about .about_point .about_box li {width: 44%; margin: 10px; padding: 10px;}
+  .about .about_point .about_box li h2 {text-align: center; font-size: 0.8rem;}
   .about .about_intro .about_flex h1 {width: 100%;}
   .about .about_intro .about_flex .about_text {width: 100%;}
+  .about .about_intro .about_flex .about_text h2 {font-size: 1rem;}
+  .about .about_intro .about_flex .about_text h3 {font-size: 0.8rem;}
+
+  .skill_flow {margin-top: 50px;}
+
+  .about .about_detail .about_swiper {width: 80%; padding: 70px 0 50px;}
+
+  .about_detail .bubble h4 {font-size: 0.9rem;}
 
   .first_interface .interface_bottom {width: 90%;}
 
+  .project {padding: 100px 0;}
   .project .fix_contents h1 {font-size: 3rem;}
-  .project .project_section {flex-direction: column;}
-  .project .project_section .project_img {width: 100%; margin: 0 auto;}
+  .project .scroll_section {margin-top: 27%;}
+  .project .project_section {flex-direction: column; margin-bottom: 100px;}
+  .project .project_section .project_img {width: 100%; margin: 0 auto 30px;}
   .project .project_section .project_text {width: 100%; margin: 0 auto;}
 
   .project .project_section .project_text h2 {font-size: 1.2rem;}
@@ -266,7 +286,12 @@
   .project .rt_project .project_img{ order: 0;}
   .project .rt_project .project_text{order: 1;}
 
+  .project .fix_contents.blur_effect {filter: none;}
+
   .process h1 {font-size: 2rem}
-  .process .process_swiper {width: 100%;}
-  .process .process_swiper img {width: 100%;}
+  .process .process_swiper img {width: 100%; filter: brightness(0.5);}
+
+  .process .process_txt {width: 100%;}
+  .process .process_txt h3 {font-size: 1rem}
+  .process .process_swiper {margin: 50px 0 0;}
   }
