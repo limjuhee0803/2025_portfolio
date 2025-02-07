@@ -131,7 +131,6 @@ observer.observe(footer);
 */
 
 // main_interface의 끝에서 5% 남았을 때 메뉴바 사라지게
-/*
 window.addEventListener('scroll', function() {
   const mainInterface = document.querySelector('.main_interface');
   const menuBar = document.querySelector('.menu-bar');
@@ -146,4 +145,3 @@ window.addEventListener('scroll', function() {
     menuBar.style.opacity = 1;
   }
 });
-*/
