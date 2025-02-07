@@ -246,6 +246,8 @@
   .about .about_intro .about_flex h1 {width: 30%;}
   .about .about_intro .about_flex .about_text {width: 67%;}
 
+  .about .about_detail .about_swiper {width: 70%;}
+
   .project .fix_contents .mockup {width: 40%;}
 
   .project .scroll_section {margin-top: 30%;}
@@ -264,7 +266,7 @@
   .about .about_point .about_box {flex-wrap: wrap; justify-content: center; gap: 0;}
   .about .about_point .about_box li {width: 44%; margin: 10px; padding: 10px;}
   .about .about_point .about_box li h2 {text-align: center; font-size: 0.8rem;}
-  .about .about_intro .about_flex h1 {width: 100%;}
+  .about .about_intro .about_flex h1 {width: 100%; font-size: 2rem;}
   .about .about_intro .about_flex .about_text {width: 100%;}
   .about .about_intro .about_flex .about_text h2 {font-size: 1rem;}
   .about .about_intro .about_flex .about_text h3 {font-size: 0.8rem;}
