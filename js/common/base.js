@@ -109,7 +109,6 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(footer);
 */
 
-
 // main_interface의 끝에서 5% 남았을 때 메뉴바 사라지게
 /*
 window.addEventListener('scroll', function() {

@@ -249,6 +249,7 @@
   .project .fix_contents .mockup {width: 40%;}
 
   .project .scroll_section {margin-top: 30%;}
+  .project .project_section .project_text h3 {width: 90%;}
   }
   
 /* Mobile (최대 767px) */
