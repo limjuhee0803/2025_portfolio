@@ -75,10 +75,10 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
   }
   
 /* Tablet (768px ~ 1023px) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .tablet_blind {display: none!important;}
 
-  .menu-bar {width: 35%;}
+  .menu-bar {width: 45%;}
   }
   
 /* Mobile (최대 767px) */
