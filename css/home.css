@@ -242,7 +242,7 @@
   }
   
 /* Tablet (768px ~ 1023px) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   .about .about_intro .about_flex h1 {width: 30%;}
   .about .about_intro .about_flex .about_text {width: 67%;}
 
@@ -252,6 +252,7 @@
   .project .project_section .project_text h3 {width: 90%;}
   }
   
+
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
   .top_interface {height: 50vh;}
