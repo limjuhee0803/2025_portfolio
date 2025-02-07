@@ -98,7 +98,7 @@
 .about .about_point .about_box{display: flex; gap: 2%;}
 .about .about_point .about_box li{display: flex; flex-direction: column; align-items: center; justify-content: center; width: 25%; padding: 20px; border-radius: 20px; background-color: #EFEFEF;} 
 .about .about_point .about_box li img {transform: scale(0.8);}
-.about .about_point .about_box li h2{ font-size: 1.2rem; font-weight: 600; margin-bottom: 20px;}
+.about .about_point .about_box li h2{ font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center;}
 .about .about_point .about_box li h3{font-family: var(--kr-font); font-size: 0.9rem; line-height: 1.6; text-align: center; color: #777777; margin-bottom: 20px;}
 
 /* 컨테이너 설정 */
