@@ -5,6 +5,7 @@
       'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
       sans-serif;
     --en-font: "Inter", Arial, Helvetica, sans-serif;
+    --retro-font : 'DungGeunMo', serif;
     --bk-font: rgba(44, 44, 44, 1);
     --blue : rgba(33, 129, 250, 1);
   }
@@ -31,7 +32,7 @@ h1 {font-weight: bold;}
   }
 }
 
-.up_img { opacity: 0; animation: fadeUp 0.8s ease-out 4s forwards; }
+.up_img { opacity: 0; animation: fadeUp 1s ease-out 0.5s forwards; }
 
 /* 애니메이션 페이드아웃 */
 @keyframes fadeOut {

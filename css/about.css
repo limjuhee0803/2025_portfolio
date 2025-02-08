@@ -1,68 +1,34 @@
 @charset "utf-8";
+
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+header, footer, .main_interface {font-family: var(--retro-font);}
 .main_interface { width: 100vw; height: 300vh; background: #fff; transition: transform 0.8s ease-in-out; margin-bottom: 230px; border-radius: 0 0 40px 40px;}
+main {background-color: #111111;}
 
 /* 메인 표지 */
-.top_interface {
-  position: relative;
-}
-
-.typing {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-#typing-text {
-  font-size: 2rem;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #777777;
-  width: 26ch;
-  animation: typing 3s steps(20) forwards, blink 0.6s infinite;
-}
-
+.top_interface { position: relative; background-color: #F5F5F7; height: 100vh;}
+.old_mac {}
+.old_mac .mac {width: 27%; margin: 0 auto; display: block; padding-top: 150px;}
+.typing {width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; color: #fff; position: absolute; top: -10%;}
+#typing-text { font-size: 1rem; font-weight: bold; white-space: nowrap; overflow: hidden; border-right: 2px solid #777777; width: 36ch; animation: typing 2s steps(20) forwards, blink 0.6s infinite;}
 @keyframes typing {
   from { width: 0; }
-  to { width: 26ch; }
+  to { width: 36ch; }
 }
-
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
-.wave-container {
-  display: flex;
-  margin-top: 40px;
-  justify-content: center;
-  align-items: flex-end;
-}
+.back_font {position: absolute; top: 10%; z-index: -1; left: 50%; transform: translateX(-50%);}
+.back_font .font{}
 
-.wave-bar {
-  width: 4px;
-  height: 30px;
-  background: linear-gradient(108deg, #0894FF, #C959DD 34%, #FF2E54 68%, #FF9004);
-  margin: 0 2px;
-  animation: wave-animation 1s infinite ease-in-out;
-  border-radius: 2px;
-}
-
-@keyframes wave-animation {
-  0%, 100% { transform: scaleY(0.3); }
-  50% { transform: scaleY(1); }
-}
-
-/* 각각 다른 시간 차이로 애니메이션 시작 */
-.wave-bar:nth-child(2) { animation-delay: 0.1s; }
-.wave-bar:nth-child(3) { animation-delay: 0.2s; }
-.wave-bar:nth-child(4) { animation-delay: 0.3s; }
-.wave-bar:nth-child(5) { animation-delay: 0.4s; }
-.wave-bar:nth-child(6) { animation-delay: 0.5s; }
-.wave-bar:nth-child(7) { animation-delay: 0.6s; }
 
 .juhee_main {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .juhee_main img{}
@@ -70,15 +36,55 @@
 .juhee_main .rt_bubble {top: 15%; right: -100%; width: 27ch;}
 .juhee_main .lt_bubble {top: 55%; left: -80%; width: 18ch;}
 
+.about_profile {}
+
+.about_profile {padding: 150px 0 100px;}
+.about_profile .profile_txt{text-align: center;}
+.about_profile .profile_txt h1{font-size: 2.5rem;}
+.about_profile .profile_txt h2{font-size: 1rem; margin-top: 20px; font-family: var(--kr-font);}
+
+.about_profile .profile_img {display: flex; gap: 20px; justify-content: center; margin: 50px 0 100px;} 
+.about_profile .profile_img li{ background-color: #F5F5F7; width: 300px; height: 350px; border-radius: 20px; overflow: hidden;}
+.about_profile .profile_img li img {object-fit: cover; height: 100%; transition: 0.3s;}
+
+.about_profile .profile_info { display: flex; justify-content: space-between; gap: 3%; padding: 0 2%;}
+.about_profile .profile_info ul{width: 22%;}
+.about_profile .profile_info ul li{}
+.about_profile .profile_info ul li h2{font-size: 2rem; border-bottom: 1px solid #111111; margin-bottom: 30px; width: auto; line-height: 2;}
+.about_profile .profile_info ul li h3{font-family: var(--kr-font); line-height: 2; color: #777777;}
+.about_profile .profile_info ul li h3 strong{font-weight: bold; margin-right: 10px; color: var(--bk-font);}
+
+.about_profile .profile_info .skill {display: flex; flex-direction: column; }
+
+.about_profile .profile_info .skill .skill_box {display: flex; flex-wrap: wrap; width: 100%; gap: 10px; text-align: center;}
+
+.about_profile .profile_info .skill .skill_box li {display: flex; flex-direction: column; align-items: center; width: 17%;}
+.about_profile .profile_info .skill li .skill_img {width: 50px; height: 50px; background-color: #111111; display: flex; justify-content: center; align-items: center; border-radius: 10px;}
+.about_profile .profile_info .skill li .skill_img img{width: 30px; height: 30px; object-fit: contain; filter: brightness(2);}
+.about_profile .profile_info .skill h3 {font-size: 0.7rem; margin-top: 10px;}
+
+.line {border: 1px solid #F4F4F4;}
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
 
+  .about_profile .profile_img li:hover img{ transform: scale(1.1);}
 
   }
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .top_interface {height: 80vh;}
+  .old_mac .mac {width: 50%; padding-top: 250px;}
+  .back_font {width: 80%;}
+  .typing {top: -24%;}
+
+
+  .about_profile {padding-bottom: 0;}
+  .about_profile .profile_img {margin-bottom: 50px;}
+
+  .about_profile .profile_info { padding: 0; flex-wrap: wrap;}
+  .about_profile .profile_info ul {width: 46%; margin-bottom: 50px;}
   }
   
 
@@ -89,9 +95,10 @@
     font-size: 20px;
   }
 
-  .wave-bar {
-    height: 20px;
-    width: 3px;
-  }
+  .about_profile {padding-bottom: 0;}
+  .about_profile .profile_img {margin-bottom: 50px;}
+
+  .about_profile .profile_info { padding: 0; flex-wrap: wrap;}
+  .about_profile .profile_info ul {width: 50%; margin-bottom: 50px;}
   
   }
