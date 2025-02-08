@@ -74,7 +74,7 @@ main {background-color: #111111;}
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
-  .top_interface {height: 80vh;}
+  .top_interface {height: 1000px;}
   .old_mac .mac {width: 50%; padding-top: 250px;}
   .back_font {width: 80%;}
   .typing {top: -24%;}
@@ -90,15 +90,22 @@ main {background-color: #111111;}
 
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
-
+  .old_mac .mac {width: 75%;}
+  .top_interface {height: 600px;}
+  .back_font {width: 80%;}
+  .typing {top: -28%;}
   #typing-text {
-    font-size: 20px;
+    font-size: 10px;
   }
 
-  .about_profile {padding-bottom: 0;}
+  .about_profile {padding: 50px 0 0;}
   .about_profile .profile_img {margin-bottom: 50px;}
+  .about_profile .profile_txt h1 {font-size: 1.5rem;}
+  .about_profile .profile_txt h2 {font-size: 0.8rem;}
 
-  .about_profile .profile_info { padding: 0; flex-wrap: wrap;}
-  .about_profile .profile_info ul {width: 50%; margin-bottom: 50px;}
-  
+  .about_profile .profile_info { padding: 0; flex-wrap: wrap; gap: 0;}
+  .about_profile .profile_info ul {width: 100%; margin-bottom: 50px;}
+  .about_profile .profile_info ul:last-child {margin-bottom: 20px;}
+  .about_profile .profile_info ul li h2 {font-size: 1.2rem;}
+  .about_profile .profile_info ul li h3 {font-size: 0.8rem;}
   }
