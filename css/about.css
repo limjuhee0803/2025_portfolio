@@ -74,10 +74,11 @@ main {background-color: #111111;}
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
-  .top_interface {height: 1000px;}
-  .old_mac .mac {width: 50%; padding-top: 250px;}
-  .back_font {width: 80%;}
-  .typing {top: -24%;}
+  .top_interface {height:800px;}
+  .old_mac .mac {width: 40%; padding-top: 150px;}
+  .back_font {width: 80%; top: 12%;}
+  #typing-text {font-size: 0.8rem;}
+  .typing {top: -52%;}
 
 
   .about_profile {padding-bottom: 0;}
