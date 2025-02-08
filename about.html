@@ -79,6 +79,7 @@
         </div> -->
       </div>
 
+      <!-- 프로필 -->
       <div class="about_profile">
         <div class="profile_txt fade_up">
           <h1>Lorem ipsum dolor sit amet</h1>
@@ -196,6 +197,131 @@
 
       <div class="line margin_section" ></div>
 
+      <!-- 취미, 성격 등 -->
+      <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <!-- Swiper Container for Mobile -->
+            <div class="swiper-container pc_blind">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-content="hobby">
+                        <img src="./asset/image/folder_old.png" alt="">
+                        Hobby
+                    </div>
+                    <div class="swiper-slide" data-content="personality">
+                      <img src="./asset/image/folder_old.png" alt="">
+                      Personality
+                    </div>
+                    <div class="swiper-slide" data-content="like">
+                        <img src="./asset/image/folder_old.png" alt="">
+                        Like
+                    </div>
+                    <div class="swiper-slide" data-content="skill">
+                      <img src="./asset/image/folder_old.png" alt="">
+                      Skill
+                  </div>
+                    <div class="swiper-slide" data-content="mbti">
+                        <img src="./asset/image/folder_old.png" alt="">
+                        MBTI
+                    </div>
+                    <div class="swiper-slide" data-content="qa">
+                        <img src="./asset/image/folder_old.png" alt="">
+                        Q&A
+                    </div>
+                </div>
+            </div>
+
+            <!-- PC에서는 기존 리스트로 표시 -->
+            <ul>
+                <li><div class="tab" onclick="showContent('hobby')">
+                    <img src="./asset/image/folder_old.png" alt="">
+                    Hobby</div>
+                </li>
+                <li><div class="tab" onclick="showContent('personality')">
+                  <img src="./asset/image/folder_old.png" alt="">
+                  Personality</div>
+              </li>
+                <li><div class="tab" onclick="showContent('like')">
+                    <img src="./asset/image/folder_old.png" alt="">
+                    Like</div>
+                </li>
+                <li><div class="tab" onclick="showContent('skill')">
+                  <img src="./asset/image/folder_old.png" alt="">
+                  Skill</div>
+                </li>
+                <li><div class="tab" onclick="showContent('mbti')">
+                    <img src="./asset/image/folder_old.png" alt="">
+                    MBTI</div>
+                </li>
+                <li><div class="tab" onclick="showContent('qa')">
+                    <img src="./asset/image/folder_old.png" alt="">
+                    Q&A</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Content Window -->
+        <div class="content-window">
+            <div id="hobby-content" class="content">
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <h1>Hobby</h1>
+              <div class="contents_info">
+
+              </div>
+            </div>
+
+            <div id="personality-content" class="content">
+              <h1>Personality</h1>
+              <div class="contents_info">
+                
+              </div>
+            </div>
+
+            <div id="like-content" class="content">
+              <h1>Like</h1>
+              <div class="contents_info">
+                
+              </div>
+            </div>
+
+            <div id="skill-content" class="content">
+              <h1>Skill</h1>
+              <div class="contents_info">
+                
+              </div>
+            </div>
+
+            <div id="mbti-content" class="content">
+              <h1>MBTI</h1>
+              <div class="contents_info">
+                
+              </div>
+            </div>
+
+            <div id="qa-content" class="content">
+              <h1>Q&A</h1>
+            </div>
+        </div>
+    </div>
+
     </div>
 
   </main>
@@ -228,6 +354,7 @@
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./js/common/base.js"></script>
+  <script src="./js/about.js"></script>
 </body>
 
 </html>

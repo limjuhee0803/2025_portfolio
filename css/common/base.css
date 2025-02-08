@@ -107,7 +107,7 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1025px) {
-
+  .pc_blind {display: none!important;}
   .view_more h2:hover {box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
 
   }
