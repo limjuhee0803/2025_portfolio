@@ -61,26 +61,6 @@
 
 .about_detail .bubble h4 { opacity: 0; color: #fff; background-color: var(--blue); border-radius: 20px; display: inline-block; padding: 10px 20px; transform: translateY(20px); transition: opacity 1s, transform 1s; position: absolute; text-align: center;}
 
-.rt_bubble::after , .lt_bubble::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-.rt_bubble::after {
-  left: -7px; /* 꼬리가 왼쪽에 위치 */
-  border-right: 15px solid var(--blue); /* 왼쪽 꼬리 부분 */
-}
-.lt_bubble::after {
-  right: -7px; /* 꼬리가 오른쪽에 위치 */
-  border-left: 15px solid var(--blue); /* 오른쪽 꼬리 부분 */
-}
-
 .bubble01 { top: 22%; left: 25%; filter: opacity(0.5);}
 .bubble02 {top: 39%; left: 16%; z-index: 5;}
 .bubble03 {top: 72%; left: 27%; z-index: 5;}
