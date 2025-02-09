@@ -198,14 +198,13 @@
       <div class="line margin_section" ></div>
 
       <!-- 취미, 성격 등 -->
-      <div class="container">
+      <div class="container margin_section">
         <!-- Left Sidebar -->
-        <div class="sidebar">
-            <!-- Swiper Container for Mobile -->
-            <div class="swiper-container pc_blind">
+        <div class="sidebar fade_up">
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-content="hobby">
-                        <img src="./asset/image/folder_old.png" alt="">
+                        <img src="./asset/image/folder_active.png" alt="">
                         Hobby
                     </div>
                     <div class="swiper-slide" data-content="personality">
@@ -219,72 +218,25 @@
                     <div class="swiper-slide" data-content="skill">
                       <img src="./asset/image/folder_old.png" alt="">
                       Skill
-                  </div>
-                    <div class="swiper-slide" data-content="mbti">
+                    </div>
+                    <!-- <div class="swiper-slide" data-content="mbti">
                         <img src="./asset/image/folder_old.png" alt="">
                         MBTI
-                    </div>
+                    </div> -->
                     <div class="swiper-slide" data-content="qa">
                         <img src="./asset/image/folder_old.png" alt="">
                         Q&A
                     </div>
                 </div>
             </div>
-
-            <!-- PC에서는 기존 리스트로 표시 -->
-            <ul>
-                <li><div class="tab" onclick="showContent('hobby')">
-                    <img src="./asset/image/folder_old.png" alt="">
-                    Hobby</div>
-                </li>
-                <li><div class="tab" onclick="showContent('personality')">
-                  <img src="./asset/image/folder_old.png" alt="">
-                  Personality</div>
-              </li>
-                <li><div class="tab" onclick="showContent('like')">
-                    <img src="./asset/image/folder_old.png" alt="">
-                    Like</div>
-                </li>
-                <li><div class="tab" onclick="showContent('skill')">
-                  <img src="./asset/image/folder_old.png" alt="">
-                  Skill</div>
-                </li>
-                <li><div class="tab" onclick="showContent('mbti')">
-                    <img src="./asset/image/folder_old.png" alt="">
-                    MBTI</div>
-                </li>
-                <li><div class="tab" onclick="showContent('qa')">
-                    <img src="./asset/image/folder_old.png" alt="">
-                    Q&A</div>
-                </li>
-            </ul>
         </div>
 
         <!-- Right Content Window -->
-        <div class="content-window">
+        <div class="content-window fade_up">
             <div id="hobby-content" class="content">
               <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
-              <h1>Hobby</h1>
               <div class="contents_info">
-
+               
               </div>
             </div>
 
@@ -303,9 +255,38 @@
             </div>
 
             <div id="skill-content" class="content">
-              <h1>Skill</h1>
-              <div class="contents_info">
-                
+              <div class="skill_box">
+                <ul class="skill_info">
+                  <li><h2>HTML5 & CSS3</h2></li>
+                  <li><h3>- HTML / CSS를 를 활용한 웹사이트 구축 및 디자인</h3></li>
+                  <li><h3>- 미디어 쿼리를 이용한 반응형 웹 제작</h3></li>
+                  <li><h3>- flex / grid / position을 이용한 레이아웃 구축</h3></li>
+                  <li><h3>- @keyframe을 활용한 애니메이션 제어</h3></li>
+                </ul>
+
+                <ul class="skill_info">
+                  <li><h2>JavaScript & jQuery</h2></li>
+                  <li><h3>- H자바스크립트 ES6+ 문법 이해</h3></li>
+                  <li><h3>- HTML / CSS를 를 활용한 웹사이트 구축 및 디자인</h3></li>
+                  <li><h3>- scroll, mouse 이벤트 제어</h3></li>
+                  <li><h3>- JavaScript와 jQuery를 통한 기능 수정 및 페이지 인터랙션 적용</h3></li>
+                </ul>
+
+                <ul class="skill_info">
+                  <li><h2>Design</h2></li>
+                  <li><h3>- Photoshop, Figma, Illustrator를 이용한 이미지 콘텐츠 제작 및 편집</h3></li>
+                  <li><h3>- Photoshop을 활용한 이미지 합성 및 비주얼 디자인 작업</h3></li>
+                  <li><h3>- illustrator를 통한 로고 제작 및 그래픽 디자인</h3></li>
+                  <li><h3>- Rhino, Keyshot을 통한 고해상도 렌더링 작업 (빠른 실무 복귀 가능)</h3></li>
+                  <li><h3>- Auto Cad를 이용한 2D 도면 작업 (빠른 실무 복귀 가능)</h3></li>
+                </ul>
+
+                <ul class="skill_info">
+                  <li><h2>Git & Github</h2></li>
+                  <li><h3>- Git Bash로 git 파일 백업 및 버전 관리, GitHub와 연동</h3></li>
+                  <li><h3>- GitHub 프로젝트 버전 관리, 백업, 복구, 로컬폴더 연동</h3></li>
+                  <li><h3>- GitHub Organization을 통한 git 팀 프로젝트 경험</h3></li>
+                </ul>
               </div>
             </div>
 
@@ -318,9 +299,12 @@
 
             <div id="qa-content" class="content">
               <h1>Q&A</h1>
+              <div class="contents_info">
+                
+              </div>
             </div>
         </div>
-    </div>
+      </div>
 
     </div>
 

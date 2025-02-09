@@ -65,30 +65,29 @@ main {background-color: #111111;}
 
 .line {border: 1px solid #F4F4F4;}
 
-.container { display: flex; width: 100%; gap: 4%; justify-content: center; align-items: center; padding: 150px 0;}
+.container { padding: 150px 0; }
 
 /* Left Sidebar */
-.sidebar { width: 544px; background-color: #ddd; color: var(--bk-font); padding: 20px; height: 470px;}
+.sidebar { color: var(--bk-font); width: 55%; margin: 0 auto; position: sticky; top: 5%; z-index: 2;}
+
 /* Sidebar Slider (for mobile) */
-.swiper-container { width: 100%; padding-bottom: 20px;}
-.swiper-slide { text-align: center; font-size: 18px; display: flex;justify-content: center; align-items: center; cursor: pointer;}
-.sidebar {background: url(../asset/image/about_lt_box.jpg) no-repeat; background-size: contain;}
-.sidebar ul {list-style-type: none; display: flex; flex-wrap: wrap; justify-content: center; margin-top: 70px;}
-.sidebar ul li { width: 150px;}
-.sidebar ul li .tab {display: flex; flex-direction: column; align-items: center;}
-.sidebar ul li img { width: 60px; margin-bottom: 10px; }
-.sidebar .tab { padding: 15px; cursor: pointer; transition: background-color 0.3s;}
-.sidebar .tab.active { background-color: #444;}
+.swiper-container {}
+.swiper-wrapper {justify-content: center;}
+.swiper-slide { text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center; cursor: pointer; flex-direction: column;}
+.swiper-slide img {width: 50px; margin-bottom: 10px;}
+
 /* Right Content Window */
-.content-window { padding: 20px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); height: 80vh; width: 50%; overflow: hidden; overflow-y: scroll; font-family: var(--kr-font);}
+.content-window { background-color: #F5F5F7; width: 100%; font-family: var(--kr-font); margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 600px;}
 .content { display: none;}
 #hobby-content { display: block; /* Default content */}
 .content p { font-size: 1.2em; }
 .content ul { margin-top: 20px; list-style-type: none;padding: 0;}
 .content ul li { margin-bottom: 10px;}
 
-.contents_info {height: 800px;}
-
+.skill_box {display: flex; flex-wrap: wrap; justify-content: center; padding: 2% 3% 3%;}
+.skill_box .skill_info{width: 47%; background-color: #fff; border-radius: 20px; padding: 40px; margin: 20px; }
+.skill_box .skill_info h2{color: var(--blue); text-align: center; font-size: 1.5rem; font-weight: bold; border-bottom: #a7a7a7 1px solid; margin-bottom: 30px; padding-bottom: 15px;}
+.skill_box .skill_info h3{font-size: 1rem; line-height: 1.5;}
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
 
@@ -131,16 +130,7 @@ main {background-color: #111111;}
   .about_profile .profile_info ul:last-child {margin-bottom: 20px;}
   .about_profile .profile_info ul li h2 {font-size: 1.2rem;}
   .about_profile .profile_info ul li h3 {font-size: 0.8rem;}
-
-  .container { flex-direction: column;}
-  .sidebar {width: 100%;height: auto;overflow: hidden;}
-  .content-window {width: 100%;}
-  /* 모바일에서 Swiper 적용 */
-  .swiper-container { width: 100%; padding-bottom: 20px; }
-  .swiper-slide {width: 40%; text-align: center; font-size: 14px; display: flex; justify-content: center; align-items: center; cursor: pointer; flex-direction: column;}
-  .swiper-slide img { width: 70px; margin-bottom: 10px;}
-  .sidebar ul {display: none;}
   
-  .sidebar {background: none;}
-  .sidebar ul li { width: 100px;}
+  .sidebar { width: 100%;}
+  .swiper-wrapper {justify-content: left;}
 }

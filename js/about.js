@@ -1,7 +1,11 @@
-// Initialize Swiper for mobile
 const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3.5, // 2.5개 슬라이드 보여주기
-    spaceBetween: 10, // 슬라이드 간격
+    slidesPerView: 3.3,
+    spaceBetween: 10,
+    breakpoints: {
+        768: {
+            slidesPerView: 6,
+        }
+    }
 });
 
 // Function to display the selected content
@@ -17,12 +21,26 @@ function showContent(tabId) {
     }
 
     // Change the active state of the tabs
-    const allTabs = document.querySelectorAll('.tab');
-    allTabs.forEach(tab => tab.classList.remove('active'));
+    const allSlides = document.querySelectorAll('.swiper-slide');
+    allSlides.forEach(slide => {
+        slide.classList.remove('active');
+        
+        // Reset image to original state
+        const img = slide.querySelector('img');
+        if (img) {
+            img.src = './asset/image/folder_old.png';
+        }
+    });
 
-    const activeTab = document.querySelector(`[data-tab="${tabId}"]`);
-    if (activeTab) {
-        activeTab.classList.add('active');
+    const activeSlide = document.querySelector(`[data-content="${tabId}"]`);
+    if (activeSlide) {
+        activeSlide.classList.add('active');
+        
+        // Change the image to the active state
+        const img = activeSlide.querySelector('img');
+        if (img) {
+            img.src = './asset/image/folder_active.png';
+        }
     }
 }
 
@@ -34,5 +52,5 @@ document.querySelectorAll('.swiper-slide').forEach(slide => {
     });
 });
 
-// Default content
+
 showContent('hobby');
