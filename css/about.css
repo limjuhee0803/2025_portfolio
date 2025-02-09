@@ -71,23 +71,37 @@ main {background-color: #111111;}
 .sidebar { color: var(--bk-font); width: 55%; margin: 0 auto; position: sticky; top: 5%; z-index: 2;}
 
 /* Sidebar Slider (for mobile) */
-.swiper-container {}
-.swiper-wrapper {justify-content: center;}
-.swiper-slide { text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center; cursor: pointer; flex-direction: column;}
-.swiper-slide img {width: 50px; margin-bottom: 10px;}
+.sidebar .swiper-container {}
+.sidebar .swiper-wrapper {justify-content: center;}
+.sidebar .swiper-slide { text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center; cursor: pointer; flex-direction: column;}
+.sidebar .swiper-slide img {width: 50px; margin-bottom: 10px;}
 
 /* Right Content Window */
-.content-window { background-color: #F5F5F7; width: 100%; font-family: var(--kr-font); margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 600px;}
-.content { display: none;}
+/* .content-window { background-color: #F5F5F7; width: 100%; font-family: var(--kr-font); margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 700px;} */
+.content { display: none; background-color: #F5F5F7; width: 100%; margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 700px; font-family: var(--en-font);}
 #hobby-content { display: block; /* Default content */}
 .content p { font-size: 1.2em; }
 .content ul { margin-top: 20px; list-style-type: none;padding: 0;}
 .content ul li { margin-bottom: 10px;}
 
+.hobby_section {background-color: #111111; color: #fff;}
+.hobby_section .hobby_title {text-align: center; margin-top: 5%;}
+.hobby_section .hobby_title h1{font-size: 3rem; font-family: var(--retro-font);}
+.hobby_section .hobby_title h2{font-size: 1rem; color: #777777; margin-top: 20px; }
+
+.hobby_section .hobby_swiper {width: 80%; margin: 100px auto 30px;}
+.hobby_section .hobby_swiper img {border-radius: 20px;}
+.hobby_section .hobby_swiper h3 {font-size: 1rem; color: #777777; margin-top: 20px;}
+.hobby_section .hobby_info {width: 80%; margin: 60px auto 50px; line-height: 1.9; color: #525252; font-size: 1rem; font-weight: 400;}
+.hobby_section .hobby_info strong {color: #fff;}
+
+
 .skill_box {display: flex; flex-wrap: wrap; justify-content: center; padding: 2% 3% 3%;}
 .skill_box .skill_info{width: 47%; background-color: #fff; border-radius: 20px; padding: 40px; margin: 20px; }
 .skill_box .skill_info h2{color: var(--blue); text-align: center; font-size: 1.5rem; font-weight: bold; border-bottom: #a7a7a7 1px solid; margin-bottom: 30px; padding-bottom: 15px;}
 .skill_box .skill_info h3{font-size: 1rem; line-height: 1.5;}
+
+
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
 

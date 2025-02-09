@@ -21,7 +21,7 @@ function showContent(tabId) {
     }
 
     // Change the active state of the tabs
-    const allSlides = document.querySelectorAll('.swiper-slide');
+    const allSlides = document.querySelectorAll('.sidebar .swiper-slide');
     allSlides.forEach(slide => {
         slide.classList.remove('active');
         
@@ -45,7 +45,7 @@ function showContent(tabId) {
 }
 
 // Function to handle swiper slide click
-document.querySelectorAll('.swiper-slide').forEach(slide => {
+document.querySelectorAll('.sidebar .swiper-slide').forEach(slide => {
     slide.addEventListener('click', () => {
         const contentId = slide.getAttribute('data-content');
         showContent(contentId);
@@ -54,3 +54,21 @@ document.querySelectorAll('.swiper-slide').forEach(slide => {
 
 
 showContent('hobby');
+
+
+//상품 스와이퍼
+var hobby_swiper = new Swiper(".hobbySwiper", {
+    slidesPerView: 2.5,
+    spaceBetween: 10,
+    slideToClickedSlide : true,
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4.5,
+        spaceBetween: 20.
+      }
+  }
+});
