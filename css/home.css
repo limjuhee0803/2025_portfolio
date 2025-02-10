@@ -156,7 +156,7 @@
 .project .fix_contents .mockup .view_more {position: absolute; top: 40%; left: 50%; transform: translateX(-50%); filter: opacity(0); transition: 0.3s;}
 
 .project .scroll_section {margin-top: 17%; position: relative; z-index: 2; }
-.project .project_section { display: flex; gap: 5%; align-items: center; margin-bottom: 7%;}
+.project .project_section { display: flex; gap: 5%; align-items: center; margin-bottom: 7%; justify-content: space-between;}
 .project .project_section .project_img{}
 .project .project_section .project_img img{border-radius: 20px;}
 

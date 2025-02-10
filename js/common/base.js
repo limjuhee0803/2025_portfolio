@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 */
 document.addEventListener("DOMContentLoaded", function () {
-  // 화면 크기가 모바일보다 클 때만 lenis 실행 (모바일 기준을 768px로 설정)
   if (window.innerWidth > 768 && !window.lenisInstance) {
     const lenis = new Lenis({
       duration: 4,
