@@ -1,0 +1,492 @@
+<style>
+    html {scroll-behavior: smooth;}
+
+    :root{
+        --common_width: 1200px;
+    }
+    /* 콘텐츠 틀 초기화 */
+    #contents .page_info{ position: absolute; right: 0; z-index: 9;}
+    .magazine_view{ width: auto; font-family: 'Noto Sans KR';}
+    .magazine_view .cont .title,
+    .magazine_view .cont .txt_03,
+    .magazine_view .cont .txt_info,
+    .magazine_view .cont .txt_01,
+    .magazine_view .cont .txt_02,
+    .magazine_view .line_01{ display: none;}
+
+    .magazine_view .relate_link,
+    .magazine_view .hashtag_box{ width: 1400px;}
+    .magazine_view .relate_link{ margin: 0 auto 30px;}
+    .magazine_view .hashtag_box{ margin: 0 auto;}
+
+    /* css 시작 */
+    .magazine_view .mb60 {margin-bottom: 0!important;}
+    .pc_br {display: block;}
+    .mo_ey {display: none;}
+
+    /* 관련상품 상단_TAB */
+    .img_memo_wrap{ position: sticky; position: -webkit-sticky; top: -1px; flex-wrap: wrap; gap: 0; margin: 0 0 0; background-color: #000; z-index: 99;}
+    .img_memo_wrap li.on{ background-color: #fff;}
+    .img_memo_wrap li.on a{ color: #000;}
+    .img_memo_wrap li{ width: 14.7%;/* 탭 개수에 맞춰서 조정*/ padding: 17px 0; box-sizing: border-box; text-align: center; border-radius: 0; background-color: inherit;}
+    .img_memo_wrap li:last-child{ border-right: none;}
+    .img_memo_wrap li a{ font-size: 24px;}
+    .tit_40 {text-align: center; padding: 20px 0; color: #fff; background-color: #000;}
+    #goodsList1 {margin-top: 80px;}
+
+    /* #visual_section */
+    #visual_section .sections{ width: 100%; max-width: 1903px; padding: 0 0;}
+    
+    .sub_title {text-align: center; padding: 100px 0; color: #fff; background-color: #111111;}
+    .sub_title h2{font-size: 30px;}
+    .sub_title h3{font-size: 19px; margin-top: 30px; font-weight: 300; line-height: 1.7;}
+    .sub_title h4{font-size: 18px; font-weight: 300; margin-top: 30px;}
+
+    /* 진행 바 */
+    .progress_bar {overflow:hidden; position:sticky; top: 0; left:0; width:100%; z-index: 3;}
+	.progress_bar .rail {height:10px; background-color:#00000094; }
+	.progress_bar .bar {position:absolute; top:0; left:auto; width:100%; height:10px; background-color:#ff0000; transform:translate3d(-100%, 0, 0); transition:transform .2s; animation-timing-function: cubic-bezier(0.8, 0.18, 0.24, 0.84); }
+
+    .body_box {display: flex; background-color: #101010;}
+    .body_box .fix_section {width: 50%; height: 100vh; position: sticky; top: 0; background-color: #101010;}
+    .body_box .scroll_section {width: 50%; background-color: #101010;}
+
+    /* 고정 섹션 / 이벤트 */
+    .event_section {padding: 7% 160px;}
+    .fix_section .event_title{margin-bottom: 20px;}
+    .fix_section .event_title h1{font-size: 30px; color: #fff; font-weight: bold; text-align: left;}
+
+    .fix_section .event_info {text-align: left; margin-top: 30px;}
+    .fix_section .event_info h3{color: #fff; font-size: 18px; font-weight: 400; margin-bottom: 20px;}
+    .fix_section .event_info h3 strong{ font-size: 22px; margin-right: 10px;}
+
+    .img_margin01 {margin-top: 100px;}
+
+    /* 스크롤 섹션 */
+    .scroll_section h3 {color: #fff; font-weight: 400; font-size: 18px; word-break: keep-all; line-height: 1.7;}
+
+    .scroll_section .main_img h3{ margin: 100px auto; width: 80%; text-align: center;}
+
+    .main_img {margin-bottom: 100px;}
+    .pd_section {padding-bottom: 30px;}
+    .pd_title {display: flex; justify-content: space-between; width: 95%; margin: 0 auto 25px; align-items: end;}
+    .pd_title h1{font-size: 30px; color: #fff; font-weight: bold;}
+    .pd_title h2{font-size: 16px; color: #AFAFAF; font-weight: 400;}
+
+    .pd_sub h3{color: #fff; font-size: 18px; font-weight: 400; text-align: center; margin: 80px 0 100px;}
+    .pd_sub .pd_link {position: relative;}
+    .pd_sub .pd_link::after {content: "+"; color: #fff; font-size: 30px; position: absolute; top: 20px; right: 20px;}
+    .pd_sub .sub_two div {display: block;}
+
+
+    .pd_sub .sub_two div:nth-child(1){text-align: left; margin: 100px 0 0; position: relative; z-index: 2;}
+    .pd_sub .sub_two div:nth-child(2){text-align: right; margin-top: -100px;}
+    
+    .pd02 .pd_sub div:nth-child(3) {margin: 20px auto 100px;} 
+
+    .pd03 .pd_sub div:nth-child(4) {margin: 80px auto 0;} 
+
+    .autoSwiper {width: 100%;}
+    .autoSwiper img {width: 100%;}
+
+    .end_brand{position: relative;}
+    .end_brand img{}
+    .end_brand a{position: absolute; top: 46%; left: 50%; transform: translateX(-50%); color: #fff; font-size: 30px; text-transform: capitalize;}
+    .end_brand a h3 {}
+
+    /* 스크롤 이벤트 */
+    .wait_scroll.scroll_ey .up{ opacity: 0; transform: translateY(100px);}
+    .scroll_ey .up{ opacity: 1; transform: translateY(0); transition: all 450ms ease-in-out;}
+
+    @media screen and (min-width: 1940px){
+
+    }
+
+    @media(max-width: 768px){
+        /* 콘텐츠 틀 초기화 768 */
+        .page_cont{ font-family: 'Noto Sans KR';}
+        .page_cont.padding_01{ padding:0;}
+        .page_view_top > *:not(.data_box){ display: none;}
+        .page_view_top > .data_box{ position: absolute; right: 0; margin: 0 0 0 !important; padding: 12px 0; text-align: right; z-index: 9; filter: brightness(0.2);}
+
+        /* 세부 css 시작 */
+        #container .mb110 {margin-bottom: 0!important;}
+        #wrap { overflow: initial; }
+        .pc_ey {display: none;}
+        .mo_ey {display: block;}
+        .progress_bar {top: 100px;}
+
+        /* 관련상품 상단_TAB 768 */
+        .img_memo_wrap{ top: 100px;}
+        .img_memo_wrap li { width: 20%;/* 탭 개수에 맞춰서 조정*/}
+
+
+        .sub_title h3 {font-size: 26px; padding: 0 24px;}
+
+        .body_box {flex-direction: column;}
+        .body_box .fix_section, .body_box .scroll_section {width: 100%;}
+        .body_box .fix_section {position: relative; height: auto;}
+
+        .event_section {padding: 100px 60px;}
+        .fix_section .event_title h1 {font-size: 40px;}
+        .fix_section .event_info {margin-top: 60px;}
+        .fix_section .event_info h3 strong {display: block; margin-bottom: 10px;}
+        .fix_section .event_info h3 {font-size: 26px; margin-bottom: 60px; line-height: 1.5;}
+    
+
+        .scroll_section .main_img h3 {font-size: 26px; width: 90%;}
+        .pd_sub .pd_link {display: inline-block;}
+        .pd_sub .sub_center {text-align: center;}
+        .pd_sub h3 {font-size: 26px; margin: 80px auto 100px; width: 80%;}
+        .pd_sub a {display: block; text-align: center;}
+
+        .end_brand a {display: block; text-align: center; width: 100%;}
+    }
+</style>
+<div id="wrapper_ey">
+    <div id="visual_section">
+        <div class="sections">
+            <img class="pc_ey" src="https://img.29cm.co.kr/cms/202410/11ef91a3bb1b9b608fb2a97f482d81a5.jpg?width=1920&q=75" alt="VISUAL IMAGE PC">
+            <img class="mo_ey" src="https://img.29cm.co.kr/cms/202410/11ef90e3068882378519a79def2ff793.jpg?width=1200&q=75" alt="VISUAL IMAGE MO">
+        </div>
+    </div>
+
+    <div class="sub_title">
+        <h2>All About Padding</h2>
+        <h3>
+           이번 4Q에서는 패딩이라는 카테고리를 설명하려 합니다.
+        </h3>
+
+        <h3>
+           패딩은 특히 겨울철 추위에 대비해 높은 보온성과 방풍 기능을 제공하기 때문에,<br>
+           오늘날 많은 사람들에게 필수적인 겨울 의류로 자리 잡았어요.<br>
+           이제는 겨울에 패딩을 꺼내 입는 것이 당연하지만 <br>
+           패딩 없는 삶. 혹시 상상해 보셨을까요? 전 추워서 안되겠네요.
+        </h3>
+
+        <h4>2024. 10. 31 - 11. 05</h4>
+   </div>
+
+   <div class="progress_bar">
+        <div class="rail"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- 본문 시작 -->
+    <div class="body_box">
+        <div class="fix_section">
+            <!-- 자유 구성 가능 ex) 슬라이드, 쿠폰, 상품 등등-->
+            <div class="event_section">
+                <div class="event_title">
+                    <h1>ROCKFISH WEATHERWEAR</h1>
+                </div>
+
+                <div class="event_img">
+                    <a href="/shop/view.php?index_no=668718" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/event/event_img.png" alt=""></a>
+                </div>
+
+                <div class="event_info">
+                    <h3><strong>Event 01.</strong> 감상 댓글 작성 시 적립금 1,000원 지급</h3>
+                    <h3><strong>Event 02.</strong> 응원의 댓글 추첨을 통하여 3명에게 락피쉬웨더웨어 신상 제품 증정</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll_section">
+            <div class="main_img">
+                <div class="swiper-container autoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/main/main01.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/main/main02.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/main/main03.jpg"></div>
+                    </div>
+                </div>
+
+                <div class="wait_scroll scroll_ey">
+                    <div class="show_trigger"></div>
+                    <h3 class="up">
+                        Rockfish Weatherwear는 햇살과 소나기를 <br>
+                        모두 즐길 수 있도록 당신의 모든 계절과 함께 합니다.<br>
+                    </h3>
+                </div>
+
+                <div class="wait_scroll scroll_ey">
+                    <div class="show_trigger"></div>
+                    <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/main/main_img02.png" class="up">
+                </div>
+            </div>
+
+            <div class="pd01 pd_section">
+                <!-- pd01 타이틀 -->
+                <div class="pd_title">
+                    <h1>ORIGINAL WINTER SLIPPER</h1>
+                    <h2>01 / 03</h2>
+                </div>
+                
+                <div class="swiper-container swiper_01 "> 
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd01/pd01_top01.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd01/pd01_top02.jpg">
+                        </div>
+                    </div>        
+                </div>
+
+                <div class="pd_sub">
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <h3 class="up">
+                            투톤 컬러의 퍼 디테일과 사키 작가님의 핸드 드로잉 자수가 유니크한 제품입니다.<br>
+                            러블리한 디자인에 어느룩에나 손쉽게 매치 가능하며 이지한 캐주얼룩을 연출해줄 수 있습니다.
+                        </h3>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey sub_center">
+                        <div class="show_trigger"></div>
+                        <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd01/pd01_sub01.jpg" class="up">
+                        </a>
+                    </div>
+
+                    <div class="sub_two">
+                        <div class="wait_scroll scroll_ey">
+                            <div class="show_trigger"></div>
+                            <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                                <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd01/pd01_sub02.jpg" class="up">
+                            </a>
+                        </div>
+    
+                        <div class="wait_scroll scroll_ey">
+                            <div class="show_trigger"></div>
+                            <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                                <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd01/pd01_sub04.jpg" class="up">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <h3 class="up">
+                            사키 작가님의 핸드 드로잉 자수가 들어간 부분과<br>
+                            인솔라벨이 락피쉬웨더웨어만의 감성이 담긴 제품입니다.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pd02 pd_section">
+                <!-- pd02 타이틀 -->
+                <div class="pd_title">
+                    <h1>FURRY MULE</h1>
+                    <h2>02 / 03</h2>
+                </div>
+                
+                <div class="swiper-container swiper_01 "> 
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd02/pd02_top01.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd02/pd02_top02.jpg">
+                        </div>
+                    </div>        
+                </div>
+
+                <div class="pd_sub">
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <h3 class="up">
+                            사키 작가님의 핸드 드로잉 포인트 자수와<br>
+                            인솔 라벨이  제품을 한층 더 귀엽게 만들어 줍니다.
+                        </h3>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey sub_center">
+                        <div class="show_trigger"></div>
+                        <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd02/pd02_sub01-2.jpg" class="up">
+                        </a>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey sub_center">
+                        <div class="show_trigger"></div>
+                        <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd02/pd02_sub02.jpg" class="up">
+                        </a>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd02/pd02_sub03.jpg" class="up">
+                        </a>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <h3 class="up">
+                            가볍고 밀도 높은 플리스 소재로 신발 전체를 감싸,<br>
+                            따뜻하고 부드러운 착화감으로 보온성을 더했습니다.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pd03 pd_section">
+                <!-- pd03 타이틀 -->
+                <div class="pd_title">
+                    <h1>FUZZY SHORT GLOVES</h1>
+                    <h2>03 / 03</h2>
+                </div>
+                
+                <div class="swiper-container swiper_01 "> 
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd03/pd03_top01.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd03/pd03_top02.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd03/pd03_top03.jpg">
+                        </div>
+                    </div>        
+                </div>
+
+                <div class="pd_sub">
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <h3 class="up">
+                            사키 작가님의 핸드 드로잉 우븐 라벨을 포인트로<br>
+                            락피쉬웨더웨어만의 감성을 담은 콜라보 제품입니다.
+                        </h3>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey sub_center">
+                        <div class="show_trigger"></div>
+                        <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd03/pd03_sub01.jpg" class="up">
+                        </a>
+                    </div>
+
+                    <div class="sub_two">
+                        <div class="wait_scroll scroll_ey">
+                            <div class="show_trigger"></div>
+                            <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                                <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd03/pd03_sub02.jpg" class="up">
+                            </a>
+                        </div>
+    
+                        <div class="wait_scroll scroll_ey">
+                            <div class="show_trigger"></div>
+                            <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                                <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd03/pd03_sub03.jpg" class="up">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <a href="/shop/view.php?index_no=671824" target="_blank" class="pd_link up">
+                            <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/pd03/pd03_sub04.jpg" class="up">
+                        </a>
+                    </div>
+
+                    <div class="wait_scroll scroll_ey">
+                        <div class="show_trigger"></div>
+                        <h3 class="up">
+                            앙고라의 보송보송한 텍스쳐의재질감과<br>
+                            락피쉬웨더웨어만의 컬러 무드가 돋보이는 사랑스러운 장갑입니다.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="end_brand">
+        <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/end/end.jpg" alt="" class="pc_ey">
+        <img src="https://cdn-tgreen.bizhost.kr/phpskr/tgreen09/2024/10/31/LJH/end/end_mo.jpg" alt="" class="mo_ey">
+        <a href="/shop/brand_goods.php?brand=3" target="_blank">
+            <h3>ROCKFISH WEATHERWEAR</h3>
+        </a>
+    </div>
+</div>
+
+<script>
+    // 스크롤 애니메이션
+    $(function(){
+        function scrollevents(scrollPos){
+            var wh =  $(window).height();
+            current_scroll = scrollPos;
+            $(".show_trigger").each(function(){
+                show_whatever($(this), current_scroll, wh);
+            });
+        }
+
+        let ticking = false;
+        var current_scroll, wh;
+        function show_whatever(el, current_scroll, wh){
+            var el_offset_t = el.offset().top;
+            if(current_scroll > el_offset_t - wh  + 100){
+                el.parent().removeClass("wait_scroll");
+                el.remove();
+            }    
+        }
+
+        $(window).on('scroll',function(){
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    scrollevents(window.scrollY);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    });
+
+    autoSwiper();
+    function autoSwiper(){
+        const auto_Sw = document.getElementsByClassName("autoSwiper");
+        let arr_slide = Array.from(auto_Sw);
+        arr_slide.forEach((ele, idx, array) => {
+            array[idx].classList.add("type" + idx);
+
+            const Swiper_sub01 = new Swiper( '.type' + idx, {
+                effect : 'fade',
+                loop : true,
+                autoplay: {
+                    delay: 1500,
+                },
+            });
+        });
+    }
+
+    // 슬라이드 스와이퍼
+        var Swiper_01 = new Swiper ('.swiper_01', {
+        observer: true,
+        observeParents: true,
+        speed: 500,
+        spacebetween: 0,
+        loop: true,
+        autoplay: { delay: 1500, disableOnInteraction: false, },
+        pagination: { el: '.swiper_01 + .swiper-pagination', },
+    });
+    	
+	// 프로그레스 바
+	let scrollNum = 0;
+	let myNum = 0;
+	$(window).on('scroll', function() {
+		const scrollHeight = $(document).height() - $(window).height();
+
+		scrollNum = window.scrollY;
+		myNum = (100 - Math.ceil(scrollNum / scrollHeight * 100)) * -1;
+
+		$('.progress_bar .bar').css({
+			transform: 'translate3d(' + myNum + '%, 0, 0)'
+		});
+	});
+
+</script>
