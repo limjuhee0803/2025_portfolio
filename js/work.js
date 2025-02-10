@@ -1,6 +1,6 @@
 //상품 스와이퍼
 var hobby_swiper = new Swiper(".workSwiper", {
-    slidesPerView: 2.5,
+    slidesPerView: 1.5,
     spaceBetween: 20,
     slideToClickedSlide : true,
     navigation:{
