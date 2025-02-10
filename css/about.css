@@ -10,7 +10,7 @@
 
 header, footer, .main_interface {font-family: var(--retro-font);}
 .main_interface { width: 100vw; background: #fff; transition: transform 0.8s ease-in-out; margin-bottom: 230px; border-radius: 0 0 40px 40px;}
-main {background-color: #111111;}
+body ,main {background-color: #111111;}
 
 /* 메인 표지 */
 .top_interface { position: relative; background-color: #F5F5F7;}
