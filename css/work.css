@@ -31,7 +31,7 @@ body ,main {background-color: #111111;}
 .work_section .swiper-wrapper .swiper-slide img{border-radius: 20px;}
 .work_section .swiper-wrapper .swiper-slide h3 {margin-top: 20px; font-weight: 600; font-size: 1rem;}
 
-.work_section .view_more {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: 0.3s;}
+.work_section .view_more {position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); transition: 0.3s;}
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
@@ -46,6 +46,7 @@ body ,main {background-color: #111111;}
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .mockup {height: 700px;}
   }
   
 

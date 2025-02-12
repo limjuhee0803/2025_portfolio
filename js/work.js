@@ -1,4 +1,4 @@
-//상품 스와이퍼
+//프로젝트 스와이퍼
 var hobby_swiper = new Swiper(".workSwiper", {
     slidesPerView: 1.5,
     spaceBetween: 20,
@@ -12,7 +12,7 @@ var hobby_swiper = new Swiper(".workSwiper", {
         slidesPerView: 3.5,
         spaceBetween: 20.
       }
-  }
+    }
 });
 
 //tab_bar
