@@ -33,7 +33,7 @@ main { margin-bottom: 230px;}
 .info_box .vision li strong {margin-right: 20px; color: #fff;}
 .info_box .vision li span {color: #fff; font-family: 600;}
 
-.design_system {display: flex; justify-content: center; align-items: start; gap: 15%; margin: 50px 0;}
+.design_system {display: flex; justify-content: center; align-items: start; gap: 15%; margin: 50px auto; width: 60%;}
 .design_system h3 {text-align: left; margin-bottom: 20px; color: #777777;}
 .design_system .color { display: flex; gap: 20px;}
 .design_system .color li{ display: flex; flex-direction: column;}
@@ -48,7 +48,6 @@ main { margin-bottom: 230px;}
 .publishing_point li{background-color: #1F1F1F; padding: 10px 40px; border-radius: 20px; cursor: pointer; transition: 0.3s;}
 .publishing_point li h3{ font-weight: 600;}
 .publishing_section .show_contents {width: 60%; border-radius: 20px; margin: 0 auto 20px;}
-/* .publishing_section h2 {width: 60%; margin: 0 auto; line-height: 1.8;} */
 .publishing_section h2 strong {color: #fff;}
 .publishing_section .show_contents .change_img {border-radius: 20px; object-fit: cover;}
 
@@ -69,7 +68,7 @@ main { margin-bottom: 230px;}
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .project_title h1 {font-size: 2rem;}
-  .info_box h2 {width: 90%;}
+  .info_box h2, .info_box .vision li, .design_system, .publishing_section .show_contents, .info04 h2{width: 80%;}
   }
   
 
@@ -96,6 +95,8 @@ main { margin-bottom: 230px;}
   .design_system .color li .color_box {width: 50px; height: 50px; border-radius: 10px;}
   .publishing_point li {padding: 10px 20px; font-size: 0.9rem;}
   .publishing_section .show_contents {width: 100%; min-height: auto;}
+
+  .info_box h2, .info_box .vision li, .design_system, .publishing_section .show_contents, .info04 h2{width: 95%;}
 
   .back_btn {position: fixed;}
   }
