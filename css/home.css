@@ -56,8 +56,8 @@
 
 .about_gray{ background-color: #F5F5F7; padding-bottom: 50px;}
 .about .about_detail { position: relative;}
-.about .about_detail .about_swiper {width: 40%; margin: 0 auto; padding: 150px 0;}
-.about .about_detail .about_swiper img {border-radius: 10px;}
+.about .about_detail .limjuhee_photo {width: 40%; margin: 0 auto; padding: 150px 0;}
+.about .about_detail .limjuhee_photo img {border-radius: 10px;}
 
 .about_detail .bubble h4 { opacity: 0; color: #fff; background-color: var(--blue); border-radius: 20px; display: inline-block; padding: 10px 20px; transform: translateY(20px); transition: opacity 1s, transform 1s; position: absolute; text-align: center;}
 
@@ -162,7 +162,7 @@
 
 .project .project_section .project_text {display: flex; flex-direction: column;}
 .project .project_section .project_text h2{font-size: 2rem; margin-bottom: 10px; font-weight: bold;}
-.project .project_section .project_text h3{font-size: 1rem; margin-bottom: 20px; width: 70%; line-height: 1.6; font-family: var(--kr-font);}
+.project .project_section .project_text h3{font-size: 1rem; margin-bottom: 20px; width: 70%; line-height: 1.6; font-family: var(--kr-font); color: #ddd;}
 .project .project_section .project_text .project_keyword{ display: flex; gap: 10px;}
 .project .project_section .project_text .project_keyword li{border: #777777 1px solid; color: #777777; padding: 5px 20px; border-radius: 20px;}
 
@@ -175,29 +175,10 @@
 .project .rt_project .project_img{ order: 1;}
 .project .rt_project .project_text{text-align: right; order: 0; align-items: end;}
 
-/* .process .process_box { background-color: #fff; width: 40%; margin: 60px auto 0; color: var(--bk-font); padding: 2% 0; border-radius: 20px;}
-.process .process_box .process_title{}
-.process .process_box .process_title h2{font-size: 1.5rem; font-weight: bold;}
-.process .process_box .process_title h3{font-size: 1rem; margin-top: 20px;}
-
-.process .process_box .process_swiper{margin: 50px 0; padding-left: 5%;}
-.process .process_box .process_swiper img{ transform: scale(0.6);}
-.process .process_box .process_swiper .swiper-slide {background-color: #FBFAFA; border-radius: 20px;}
-.process .process_box .process_swiper h3 {margin-bottom: 20px;}
-
-.process .process_box .process_btn{display: flex; gap: 2%; width: 90%; margin: 0 auto;}
-.process .process_box .process_btn .going_btn{width: 50%; border-radius: 20px;}
-.process .process_box .process_btn .going_btn h3{padding: 15px 0; font-size: 1rem; font-weight: bold;}
-
-.process .process_box .process_btn .keep{background-color: #F4F4F4;}
-.process .process_box .process_btn .process_page{background-color: var(--blue); color: #fff;} */
-
-.process {}
 .process .process_title{display: flex; justify-content: space-between; margin-top: 15%; align-items: center;}
 .process h1 {text-align: left; font-size: 4rem;}
 .process .process_swiper {margin: 50px 0 100px; position: relative; width: 100%;}
 .process .process_swiper img {border-radius: 20px; transition: 0.3s;}
-/* .process .process_txt {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;} */
 .process .process_txt h3{font-size: 1.5rem; margin-top: 60px; transition: 0.3s;}
 .process .process_swiper .swiper-slide {overflow: hidden; border-radius: 20px;}
 .process .process_swiper .autoSwiper02 {overflow: hidden;}
@@ -213,20 +194,13 @@
   .project .project_section .project_img:hover .view_more {filter: opacity(1);}
   .project .project_section .project_img a img {transition: 0.3s;}
   .project .project_section .project_img:hover a img {filter: brightness(0.5) blur(2px);}
-
-  /* .process .process_txt h3{filter: opacity(0);}
-  .process .process_swiper:hover .process_txt h3 {filter: opacity(1);}
-  .process .process_swiper:hover img {filter: brightness(0.5) blur(1px);} */
-
-
   }
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
-  /* .about .about_intro .about_flex h1 {width: 30%;} */
   .about .about_intro .about_flex .about_text {width: 67%;}
 
-  .about .about_detail .about_swiper {width: 70%;}
+  .about .about_detail .limjuhee_photo {width: 70%;}
 
   .project .fix_contents .mockup {width: 40%;}
 
@@ -252,8 +226,7 @@
   .about .about_intro .about_flex .about_text h3 {font-size: 0.8rem;}
 
   .skill_flow {margin-top: 50px;}
-
-  .about .about_detail .about_swiper {width: 80%; padding: 70px 0 50px;}
+  .about .about_detail .limjuhee_photo{width: 80%; padding: 70px 0 50px;}
 
   .about_detail .bubble h4 {font-size: 0.9rem;}
 
@@ -261,13 +234,14 @@
 
   .project {padding: 100px 0;}
   .project .fix_contents h1 {font-size: 3rem;}
+  .project .fix_contents .mockup {width: 55%;}
   .project .scroll_section {margin-top: 27%;}
   .project .project_section {flex-direction: column; margin-bottom: 100px;}
   .project .project_section .project_img {width: 100%; margin: 0 auto 30px;}
   .project .project_section .project_text {width: 100%; margin: 0 auto;}
 
   .project .project_section .project_text h2 {font-size: 1.2rem;}
-  .project .project_section .project_text h3 {width: 100%;}
+  .project .project_section .project_text h3 {width: 100%; font-size: 0.8rem;}
   .project .project_section .project_text .project_keyword {font-size: 0.7rem;}
 
   .project .rt_project .project_img{ order: 0;}
