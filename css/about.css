@@ -36,7 +36,9 @@ body ,main {background-color: #111111;}
 .juhee_main .rt_bubble {top: 15%; right: -100%; width: 27ch;}
 .juhee_main .lt_bubble {top: 55%; left: -80%; width: 18ch;}
 
-.about_profile {}
+
+
+/* .about_profile {}
 
 .about_profile {padding: 150px 0 100px;}
 .about_profile .profile_txt{text-align: center;}
@@ -61,7 +63,26 @@ body ,main {background-color: #111111;}
 .about_profile .profile_info .skill .skill_box li {display: flex; flex-direction: column; align-items: center; width: 17%;}
 .about_profile .profile_info .skill li .skill_img {width: 50px; height: 50px; background-color: #111111; display: flex; justify-content: center; align-items: center; border-radius: 10px;}
 .about_profile .profile_info .skill li .skill_img img{width: 30px; height: 30px; object-fit: contain; filter: brightness(2);}
-.about_profile .profile_info .skill h3 {font-size: 0.7rem; margin-top: 10px;}
+.about_profile .profile_info .skill h3 {font-size: 0.7rem; margin-top: 10px;} */
+
+.about_profile {padding: 150px 0;}
+.about_profile .profile_title {text-align: center;}
+.about_profile .profile_title h2{font-size: 1.2rem;}
+.about_profile .profile_title h1{font-size: 2.5rem; margin-top: 20px;}
+
+.profile_box {display: flex; width: 80%; margin: 80px auto 50px; justify-content: space-between; gap: 100px;}
+.profile_box .main_profile{width: 30%; max-width: 400px; border-radius: 20px; object-fit: contain;}
+.profile_box .profile_txt{display: flex; flex-wrap: wrap;}
+.profile_box .profile_txt ul{width: 50%; padding: 0 30px;}
+.profile_box .profile_txt ul li{}
+.profile_box .profile_txt ul li h2{ margin-bottom: 20px; font-size: 1.5rem; border-bottom: #111111 1px solid; line-height: 2;}
+.profile_box .profile_txt ul li h3{font-size: 1rem; line-height: 1.5;}
+.profile_box .profile_txt ul li h3 span{margin-right: 15px;}
+.profile_box .profile_txt ul .skill_box {display: flex; flex-wrap: wrap; padding: 0; width: 100%; gap: 10px;}
+.profile_box .profile_txt ul .skill_box li {display: flex; flex-direction: column; align-items: center; width: 18%;}
+.profile_box .profile_txt ul .skill_box .skill_img{width: 50px; height: 50px; background-color: #111111; display: flex; justify-content: center; align-items: center; border-radius: 10px;}
+.profile_box .profile_txt ul .skill_box .skill_img img {filter: brightness(2); width: 20px; object-fit: contain;}
+.profile_box .profile_txt ul .skill_box h3 {font-size: 0.8rem; margin-top: 5px;}
 
 .line {border: 1px solid #F4F4F4;}
 
@@ -88,8 +109,8 @@ body ,main {background-color: #111111;}
 .hobby_section .hobby_title h1{font-size: 3rem;}
 .hobby_section .hobby_title h2{margin-top: 20px;}
 .hobby_section .hobby_icon {display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; width: 60%; margin: 0 auto;}
-.hobby_section .hobby_icon li{display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 80px 0;}
-.hobby_section .hobby_icon li img{}
+.hobby_section .hobby_icon li{display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 80px 0; width: 20%;}
+.hobby_section .hobby_icon li img{height: 120px; object-fit: contain;}
 .hobby_section .hobby_icon li h3{ margin-top: 20px;}
 .hobby_section h4{ width: 65%; margin: 0 auto; line-height: 1.8;}
 
@@ -101,9 +122,6 @@ body ,main {background-color: #111111;}
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
-
-  .about_profile .profile_img li:hover img{ transform: scale(1.1);}
-
   .hobby_section .hobby_title h1 {font-size: 3rem;}
 
   }
@@ -116,14 +134,25 @@ body ,main {background-color: #111111;}
   #typing-text {font-size: 0.8rem;}
   .typing {top: -39%;}
 
+  .about_profile .profile_title h1 {font-size: 2rem;}
 
-  .about_profile {padding-bottom: 0;}
+
+  /* .about_profile {padding-bottom: 0;}
   .about_profile .profile_img {margin-bottom: 50px;}
 
   .about_profile .profile_info { padding: 0; flex-wrap: wrap;}
-  .about_profile .profile_info ul {width: 46%; margin-bottom: 50px;}
-
+  .about_profile .profile_info ul {width: 46%; margin-bottom: 50px;} */
+  .about_profile {padding: 100px 0;}
+  .profile_box {flex-direction: column;}
+  .profile_box .main_profile {width: 60%; margin: 0 auto;}
+  .profile_box .profile_txt {display: flex; flex-direction: column; gap: 50px;}
+  .profile_box .profile_txt ul {width: 80%; margin: 0 auto;}
+  .profile_box .profile_txt ul .skill_box {margin-top: 50px;}
   .hobby_section .hobby_title h1 {font-size: 2rem;}
+
+  .container {padding: 100px 0;}
+
+  .hobby_section .hobby_icon {width: 90%;}
   }
   
 
@@ -135,7 +164,7 @@ body ,main {background-color: #111111;}
   .typing {top: -32%;}
   #typing-text {font-size: 10px;}
 
-  .about_profile {padding: 50px 0 0;}
+  /* .about_profile {padding: 50px 0 0;}
   .about_profile .profile_img {margin-bottom: 50px;}
   .about_profile .profile_txt h1 {font-size: 1.5rem;}
   .about_profile .profile_txt h2 {font-size: 0.8rem;}
@@ -144,7 +173,20 @@ body ,main {background-color: #111111;}
   .about_profile .profile_info ul {width: 100%; margin-bottom: 50px;}
   .about_profile .profile_info ul:last-child {margin-bottom: 20px;}
   .about_profile .profile_info ul li h2 {font-size: 1.2rem;}
-  .about_profile .profile_info ul li h3 {font-size: 0.8rem;}
+  .about_profile .profile_info ul li h3 {font-size: 0.8rem;} */
+  .about_profile {padding: 80px 0;}
+  .about_profile .profile_title h2 {font-size: 0.9rem;}
+  .about_profile .profile_title h1 {font-size: 1.2rem;}
+  .profile_box {flex-direction: column; width: 90%; margin: 30px auto; gap: 30px;}
+  .profile_box .main_profile {width: 80%; margin: 0 auto;}
+  .profile_box .profile_txt {display: flex; flex-direction: column; gap: 30px;}
+  .profile_box .profile_txt ul {width: 100%;}
+
+  .profile_box .profile_txt ul li h2 {font-size: 1.2rem;}
+  .profile_box .profile_txt ul li h3 {font-size: 0.8rem;}
+
+  .profile_box .profile_txt ul .skill_box li {width: 17%;}
+  .profile_box .profile_txt ul .skill_box h3 {display: none;}
 
   .container {padding: 50px 0;}
   .content {min-height: 500px;}
@@ -154,8 +196,9 @@ body ,main {background-color: #111111;}
   .hobby_section .hobby_title h2 {font-size: 0.8rem;}
   .hobby_section .hobby_icon {width: 100%; gap: 20px; margin-top: 30px;}
   .hobby_section .hobby_icon li {width: 30%; margin: 10px 0;}
+  .hobby_section .hobby_icon li img{height: 100px;}
   .hobby_section h4 {width: 90%; font-size: 0.8rem; margin-top: 30px;}
   
   .sidebar { width: 100%;}
-  .swiper-wrapper {justify-content: left;}
+  .sidebar .swiper-wrapper {justify-content: start;}
 }
