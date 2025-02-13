@@ -78,25 +78,26 @@ main { margin-bottom: 230px;}
   .project_title {width: 100%; height: auto; padding: 20px; border-bottom:#1F1F1F solid 1px; z-index: 5;}
   .project_info {width: 100%;}
 
-  .project_title h1 {font-size: 1.2rem;}
+  .project_title h1 {font-size: 1.3rem;}
   .project_title h3 {font-size: 0.8rem;}
   .project_title .view_more {margin-top: 20px;}
 
   .main_mockup {width: 80%; margin-top: 30px;}
 
   .info_box {margin: 100px 0;}
-  .info_box h1 {font-size: 1.3rem;}
+  .info_box h1 {font-size: 1.2rem;}
   .info_box h2 { width: 100%; font-size: 0.9rem;}
-  .info_box .vision li {width: 100%; line-height: 1.5;}
+  .info_box .vision li {width: 100%; line-height: 1.5; font-size: 0.9rem;}
+  .info_box .vision li strong {margin-right: 10px;}
   .project_info {padding: 20px;}
-  .design_system {flex-direction: column; gap: 50px; width: 90%; margin: 50px auto;}
+  .design_system {flex-direction: column; gap: 50px; width: 85%; margin: 50px auto;}
   .design_system .color {gap: 10px;}
   .design_system .color li h4 {font-size: 0.8rem;}
   .design_system .color li .color_box {width: 50px; height: 50px; border-radius: 10px;}
   .publishing_point li {padding: 10px 20px; font-size: 0.9rem;}
   .publishing_section .show_contents {width: 100%; min-height: auto;}
 
-  .info_box h2, .info_box .vision li, .design_system, .publishing_section .show_contents, .info04 h2{width: 95%;}
+  .info_box h2, .info_box .vision li, .publishing_section .show_contents, .info04 h2{width: 95%;}
 
   .back_btn {position: fixed;}
   }
