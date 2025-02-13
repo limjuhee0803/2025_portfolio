@@ -16,16 +16,6 @@ body ,main {background-color: #111111;}
 .top_interface { position: relative; background-color: #F5F5F7;}
 .old_mac {position: relative; width: 100%; height: 100vh;}
 .old_mac .mac {width: 27%; margin: 0 auto; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-.typing {width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; color: #fff; position: absolute; top: -15%;}
-#typing-text { font-size: 1rem; font-weight: bold; white-space: nowrap; overflow: hidden; border-right: 2px solid #777777; width: 36ch; animation: typing 2s steps(20) forwards, blink 0.6s infinite;}
-@keyframes typing {
-  from { width: 0; }
-  to { width: 36ch; }
-}
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
 .back_font {position: absolute; top: 5%; z-index: -1; left: 50%; transform: translateX(-50%);}
 .back_font .font{}
 
@@ -35,35 +25,6 @@ body ,main {background-color: #111111;}
 .juhee_main .rt_bubble, .juhee_main .lt_bubble {background-color: var(--blue); border-radius: 20px; padding: 10px 20px; color: #fff; display: inline-block; position: absolute; font-size: 1.2rem;}
 .juhee_main .rt_bubble {top: 15%; right: -100%; width: 27ch;}
 .juhee_main .lt_bubble {top: 55%; left: -80%; width: 18ch;}
-
-
-
-/* .about_profile {}
-
-.about_profile {padding: 150px 0 100px;}
-.about_profile .profile_txt{text-align: center;}
-.about_profile .profile_txt h1{font-size: 2.5rem;}
-.about_profile .profile_txt h2{font-size: 1rem; margin-top: 20px; font-family: var(--kr-font);}
-
-.about_profile .profile_img {display: flex; gap: 20px; justify-content: center; margin: 50px 0 100px;} 
-.about_profile .profile_img li{ background-color: #F5F5F7; width: 300px; height: 400px; border-radius: 20px; overflow: hidden;}
-.about_profile .profile_img li img {object-fit: cover; height: 100%; transition: 0.3s;}
-
-.about_profile .profile_info { display: flex; justify-content: space-between; gap: 3%; padding: 0 2%;}
-.about_profile .profile_info ul{width: 22%;}
-.about_profile .profile_info ul li{}
-.about_profile .profile_info ul li h2{font-size: 2rem; border-bottom: 1px solid #111111; margin-bottom: 30px; width: auto; line-height: 2;}
-.about_profile .profile_info ul li h3{font-family: var(--kr-font); line-height: 2; color: #777777;}
-.about_profile .profile_info ul li h3 strong{font-weight: bold; margin-right: 10px; color: var(--bk-font);}
-
-.about_profile .profile_info .skill {display: flex; flex-direction: column; }
-
-.about_profile .profile_info .skill .skill_box {display: flex; flex-wrap: wrap; width: 100%; gap: 10px; text-align: center;}
-
-.about_profile .profile_info .skill .skill_box li {display: flex; flex-direction: column; align-items: center; width: 17%;}
-.about_profile .profile_info .skill li .skill_img {width: 50px; height: 50px; background-color: #111111; display: flex; justify-content: center; align-items: center; border-radius: 10px;}
-.about_profile .profile_info .skill li .skill_img img{width: 30px; height: 30px; object-fit: contain; filter: brightness(2);}
-.about_profile .profile_info .skill h3 {font-size: 0.7rem; margin-top: 10px;} */
 
 .about_profile {padding: 150px 0;}
 .about_profile .profile_title {text-align: center;}
@@ -98,25 +59,43 @@ body ,main {background-color: #111111;}
 .sidebar .swiper-slide { text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center; cursor: pointer; flex-direction: column;}
 .sidebar .swiper-slide img {width: 50px; margin-bottom: 10px;}
 
-.content { display: none; background-color: #F5F5F7; width: 100%; margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 700px; font-family: var(--en-font);}
+.content { display: none; background-color: #F5F5F7; width: 100%; margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 700px; font-family: var(--retro-font);}
 #hobby-content { display: block; /* Default content */}
 .content p { font-size: 1.2em; }
 .content ul { margin-top: 20px; list-style-type: none;padding: 0;}
 .content ul li { margin-bottom: 10px;}
 
-.hobby_section {text-align: center; font-family: var(--retro-font); padding: 100px 0;}
+.hobby_section {text-align: center; padding: 100px 0;}
 .hobby_section .hobby_title{}
 .hobby_section .hobby_title h1{font-size: 3rem;}
-.hobby_section .hobby_title h2{margin-top: 20px;}
+.hobby_section .hobby_title h2{margin-top: 30px;}
 .hobby_section .hobby_icon {display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; width: 60%; margin: 0 auto;}
 .hobby_section .hobby_icon li{display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 80px 0; width: 20%;}
 .hobby_section .hobby_icon li img{height: 120px; object-fit: contain;}
 .hobby_section .hobby_icon li h3{ margin-top: 20px;}
 .hobby_section h4{ width: 65%; margin: 0 auto; line-height: 1.8;}
 
+.personality_section {}
+.keyword_box {position: relative; width: 60%; margin: 0 auto;}
+.keyword_box .pixel_img{width: 50%; margin: 0 auto;}
+.keyword_box .pixel_img img{}
+.keyword_box .personality_keyword{}
+.keyword_box .personality_keyword h3{position: absolute; font-size: 1rem;}
+.keyword01{top: 18%; left: 26%;}
+.keyword02{top: 28%; left: 17%;}
+.keyword03{top: 50%; left: 23%;}
+.keyword04{top: 78%; left: 18%;}
+.keyword05{top: 63%; left: 6%;}
+.keyword06{top: 27%; right: 6%;}
+.keyword07{top: 24%; right: 31%;}
+.keyword08{top: 48%; right: 20%;}
+.keyword09{top: 81%; right: 31%;}
+.keyword10 {top: 61%; right: 9%;}
+.personality_section h4 {width: 70%; margin: 0 auto; line-height: 1.7; border: 3px solid #111111; border-radius: 20px; padding: 50px; margin-bottom: 60px;}
+
 .skill_box {display: flex; flex-wrap: wrap; justify-content: center; padding: 2% 3% 3%;}
-.skill_box .skill_info{width: 47%; background-color: #fff; border-radius: 20px; padding: 40px; margin: 20px; }
-.skill_box .skill_info h2{color: var(--blue); text-align: center; font-size: 1.5rem; font-weight: bold; border-bottom: #a7a7a7 1px solid; margin-bottom: 30px; padding-bottom: 15px;}
+.skill_box .skill_info{width: 47%; border-radius: 20px; padding: 40px; margin: 20px; border: 3px solid #111111;}
+.skill_box .skill_info h2{text-align: center; font-size: 1.5rem; font-weight: bold; border-bottom: #a7a7a7 1px solid; margin-bottom: 30px; padding-bottom: 15px;}
 .skill_box .skill_info h3{font-size: 1rem; line-height: 1.5;}
 
 
@@ -131,17 +110,9 @@ body ,main {background-color: #111111;}
   .old_mac {height:800px;}
   .old_mac .mac {width: 40%; padding-top: 150px;}
   .back_font {width: 80%; top: 12%;}
-  #typing-text {font-size: 0.8rem;}
-  .typing {top: -39%;}
 
   .about_profile .profile_title h1 {font-size: 2rem;}
 
-
-  /* .about_profile {padding-bottom: 0;}
-  .about_profile .profile_img {margin-bottom: 50px;}
-
-  .about_profile .profile_info { padding: 0; flex-wrap: wrap;}
-  .about_profile .profile_info ul {width: 46%; margin-bottom: 50px;} */
   .about_profile {padding: 100px 0;}
   .profile_box {flex-direction: column;}
   .profile_box .main_profile {width: 60%; margin: 0 auto;}
@@ -153,6 +124,11 @@ body ,main {background-color: #111111;}
   .container {padding: 100px 0;}
 
   .hobby_section .hobby_icon {width: 90%;}
+
+  .keyword_box {width: 80%;}
+  .personality_section h4 {width: 80%;}
+
+  .skill_box .skill_info {width: 75%;}
   }
   
 
@@ -161,19 +137,7 @@ body ,main {background-color: #111111;}
   .old_mac .mac {width: 75%;}
   .old_mac {height: 600px;}
   .back_font {width: 80%;}
-  .typing {top: -32%;}
-  #typing-text {font-size: 10px;}
-
-  /* .about_profile {padding: 50px 0 0;}
-  .about_profile .profile_img {margin-bottom: 50px;}
-  .about_profile .profile_txt h1 {font-size: 1.5rem;}
-  .about_profile .profile_txt h2 {font-size: 0.8rem;}
-
-  .about_profile .profile_info { padding: 0; flex-wrap: wrap; gap: 0;}
-  .about_profile .profile_info ul {width: 100%; margin-bottom: 50px;}
-  .about_profile .profile_info ul:last-child {margin-bottom: 20px;}
-  .about_profile .profile_info ul li h2 {font-size: 1.2rem;}
-  .about_profile .profile_info ul li h3 {font-size: 0.8rem;} */
+  
   .about_profile {padding: 80px 0;}
   .about_profile .profile_title h2 {font-size: 0.9rem;}
   .about_profile .profile_title h1 {font-size: 1.2rem;}
@@ -198,6 +162,15 @@ body ,main {background-color: #111111;}
   .hobby_section .hobby_icon li {width: 30%; margin: 10px 0;}
   .hobby_section .hobby_icon li img{height: 100px;}
   .hobby_section h4 {width: 90%; font-size: 0.8rem; margin-top: 30px;}
+
+  .keyword_box {width: 95%;}
+  .keyword_box .pixel_img {width: 100%;}
+  .personality_keyword {display: none;}
+  .personality_section h4 {width: 90%; padding: 20px; font-size: 0.9rem;}
+
+  .skill_box .skill_info {width: 100%; padding: 10px; margin: 30px 0;}
+  .skill_box .skill_info h2 {font-size: 1.2rem; margin-bottom: 20px;}
+  .skill_box .skill_info h3 {font-size: 0.8rem;}
   
   .sidebar { width: 100%;}
   .sidebar .swiper-wrapper {justify-content: start;}

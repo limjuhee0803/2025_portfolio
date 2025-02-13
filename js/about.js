@@ -74,22 +74,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 */
-  
 
+//personality 마우스 이벤트
+const img1 = document.querySelector('.keyword01');
+const img2 = document.querySelector('.keyword02');
+const img3 = document.querySelector('.keyword03');
+const img4 = document.querySelector('.keyword04');
+const img5 = document.querySelector('.keyword05');
+const img6 = document.querySelector('.keyword06');
+const img7 = document.querySelector('.keyword07');
+const img8 = document.querySelector('.keyword08');
+const img9 = document.querySelector('.keyword09');
+const img10 = document.querySelector('.keyword10');
 
-//상품 스와이퍼
-var hobby_swiper = new Swiper(".hobbySwiper", {
-    slidesPerView: 2.5,
-    spaceBetween: 10,
-    slideToClickedSlide : true,
-    navigation:{
-        nextEl:".swiper-button-next",
-        prevEl:".swiper-button-prev",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 4.5,
-        spaceBetween: 20.
-      }
-  }
+function updatePosition(x, y) {
+    img1.style.transform = `translate(${x / 60}px, ${-y / 50}px)`;
+    img2.style.transform = `translate(${x / -50}px, ${-y / 100 + 10}px)`;
+    img3.style.transform = `translate(${30 - x / 70}px, ${y / 60}px)`;
+    img4.style.transform = `translate(${50 - x / 90}px, ${-y / 30}px)`;
+    img5.style.transform = `translate(${x / 40}px, ${y / -80}px)`;
+    img6.style.transform = `translate(${x / -60}px, ${y / 40}px)`;
+    img7.style.transform = `translate(${x / 70}px, ${-y / 90}px)`;
+    img8.style.transform = `translate(${x / -80}px, ${y / 30}px)`;
+    img9.style.transform = `translate(${x / 50}px, ${y / -70}px)`;
+    img10.style.transform = `translate(${x / -90}px, ${y / 20}px)`;
+}
+
+addEventListener('mousemove', (evt) => {
+  updatePosition(evt.clientX, evt.clientY);
+});
+
+// 모바일 터치 대응
+addEventListener('touchmove', (evt) => {
+  let touch = evt.touches[0]; // 첫 번째 터치 포인트 가져오기
+  updatePosition(touch.clientX, touch.clientY);
 });
