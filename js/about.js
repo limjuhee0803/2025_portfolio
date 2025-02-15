@@ -109,3 +109,11 @@ addEventListener('touchmove', (evt) => {
   let touch = evt.touches[0]; // 첫 번째 터치 포인트 가져오기
   updatePosition(touch.clientX, touch.clientY);
 });
+
+
+const conceptBtn = document.querySelector('.concept_btn');
+const conceptTxt = document.querySelector('.concept_txt');
+
+conceptBtn.addEventListener('click', function () {
+  conceptBtn.classList.toggle('active');
+});

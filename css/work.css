@@ -2,22 +2,7 @@
 body ,main {background-color: #111111;}
 .main_interface { width: 100vw; background: #fff; transition: transform 0.8s ease-in-out; margin-bottom: 230px; border-radius: 0 0 40px 40px;}
 
-/* 메인 표지 */
-.top_interface { position: relative; background-color: #F5F5F7;}
-.mockup {position: relative; width: 100%; height: 100vh;}
-.mockup .mac {width: 35%; margin: 0 auto; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-
-.back_font {position: absolute; top: 5%; z-index: -1; left: 50%; transform: translateX(-50%);}
-.back_font .font{}
-
-
-/* .work_intro {display: flex; justify-content: center; align-items: center; gap: 5%; padding: 100px 0;}
-.work_intro img {width: 20%;}
-.work_intro .work_txt {width: 60%;}
-.work_intro .work_txt h2{ font-weight: 600; font-size: 1.2rem;}
-.work_intro .work_txt h3{ margin-top: 20px; font-size: 1rem; line-height: 1.7;} */
-
-.tab_bar {display: flex; justify-content: center; gap: 5%; margin-top: 5%;}
+.tab_bar {display: flex; justify-content: center; gap: 5%; padding-top: 7%;}
 .tab_bar li{}
 .tab_bar li a{display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .tab_bar li a img{}
@@ -35,6 +20,8 @@ body ,main {background-color: #111111;}
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
+  .work_section h1 {font-size: 3rem;}
+   
   .work_section .swiper-wrapper .swiper-slide {transition: 0.3s;}
   .work_section .swiper-wrapper .swiper-slide:hover {transform: translateY(-10px);}
   .work_section .swiper-wrapper .swiper-slide img{filter: grayscale(1); transition: 0.3s;}
