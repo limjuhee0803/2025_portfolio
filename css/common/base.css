@@ -115,6 +115,7 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .tablet_blind {display: none!important;}
+  .menu-bar a {font-size: 1rem;}
   }
   
 /* Mobile (최대 767px) */
@@ -123,7 +124,7 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
 
     /* menu */
   /* .menu-bar { width: 90%;} */
-  .menu-bar a {padding: 7px 10px;}
+  .menu-bar a {padding: 7px 15px;}
 
   .view_more h2 {font-size: 0.8rem; height: 30px; line-height: 30px!important; padding: 0 15px;}
 

@@ -198,6 +198,9 @@
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
+
+  .top_interface .main_txt h1 {font-size: 5rem;}
+  .juhee_main {width: 100%;}
   .about .about_intro .about_flex .about_text {width: 67%;}
 
   .about .about_detail .limjuhee_photo {width: 70%;}
@@ -211,9 +214,11 @@
 
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
-  .top_interface {height: 50vh;}
+  .top_interface {height: 700px;}
 
+  .top_interface .main_txt {padding-top: 40%;}
   .top_interface .main_txt h1 {font-size: 2rem;}
+  .juhee_main {width: 100%;}
 
   .about .about_intro {padding: 50px 0;}
   .about .about_intro .about_flex {flex-direction: column; gap: 30px;}
