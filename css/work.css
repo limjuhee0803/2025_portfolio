@@ -2,10 +2,10 @@
 body ,main {background-color: #111111;}
 .main_interface { width: 100vw; background: #fff; transition: transform 0.8s ease-in-out; margin-bottom: 230px; border-radius: 0 0 40px 40px;}
 
-.tab_bar {display: flex; justify-content: center; gap: 5%; padding-top: 7%;}
-.tab_bar li{}
+.tab_bar {display: flex; justify-content: center; gap: 13%; padding-top: 7%; width: 25%; margin: 0 auto;}
+.tab_bar li{width: 33.3333%;}
 .tab_bar li a{display: flex; flex-direction: column; justify-content: center; align-items: center;}
-.tab_bar li a img{}
+.tab_bar li a img{width: 80%;}
 .tab_bar li a h2{font-weight: 600; margin-top: 10px; font-size: 1rem;}
 
 .work_section {margin-left: 5%; padding-top: 80px;}
@@ -34,6 +34,7 @@ body ,main {background-color: #111111;}
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .mockup {height: 700px;}
+  .tab_bar {width: 50%;}
   }
   
 

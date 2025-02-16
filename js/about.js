@@ -1,5 +1,5 @@
 const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3.3,
+    slidesPerView: 3.5,
     spaceBetween: 10,
     breakpoints: {
         768: {

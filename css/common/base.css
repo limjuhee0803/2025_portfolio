@@ -68,8 +68,6 @@ footer .footer_flex{display: flex; align-items: center; justify-content: space-b
 footer .footer_flex .thanks{text-align: left;}
 footer .footer_flex .thanks h3{line-height: 1.5;}
 
-footer .footer_flex img{width: 80px;}
-
 footer .footer_flex .contact{text-align: right;}
 footer .footer_flex .contact h2{font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;}
 footer .footer_flex .contact h3{font-size: 1rem;}
@@ -131,4 +129,6 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
   footer .footer_flex {flex-direction: column;}
   footer .footer_flex .thanks {order: 1;}
   footer .footer_flex img {margin-bottom: 30px;}
+  footer .footer_link {gap: 30px;}
+  footer .footer_link li a {font-size: 0.9rem}
   }

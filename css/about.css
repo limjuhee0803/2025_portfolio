@@ -220,9 +220,11 @@ body ,main {background-color: #111111;}
   .qa_box h2 {font-size: 0.9rem;}
   .qa_box, .a_txt {width: 100%;}
 
-  .sidebar { width: 100%;}
+  .sidebar { width: 100%; overflow: hidden;}
   .sidebar .swiper-wrapper {justify-content: start;}
+  .content {width: 90%; margin: 30px auto 0;}
 
+  .concept {width: 90%; margin: 30px auto 0;}
   .concept_txt {
     width: 80%;
     font-size: 0.8rem;
