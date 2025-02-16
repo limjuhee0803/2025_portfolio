@@ -44,6 +44,15 @@ body ,main {background-color: #111111;}
   .top_interface {height: 800px;}
   .os {width: 70%;}
   .airdrop {width: 30%; padding-top: 20%;}
+
+  .process_info h1 {font-size: 2rem;}
+  .process_info h3 {width: 60%;}
+
+  .vision img {width: 35%;}
+  .concept img {width: 10%;}
+  .point_section {width: 80%;}
+
+  .publishing_section h2 {width: 60%;}
   }
   
 
@@ -51,4 +60,23 @@ body ,main {background-color: #111111;}
 @media only screen and (max-width: 767px) {
   .top_interface {height: 700px;}
   .airdrop {width: 80%; padding-top: 150px;}
+
+  .process_info {padding: 80px 0 0;}
+  .process_info h1 {font-size: 1.5rem; margin-top: 20px;}
+  .process_info h2 {font-size: 20px;}
+  .process_info h3 {width: 85%; line-height: 1.8;}
+
+  .vision img {width: 70%;}
+
+  .point_section {width: 90%; flex-wrap: wrap;}
+  .point_section .point_box {width: 70%;}
+  .point_section .point_box h3 {font-size: 1.2rem; margin: 20px 0;}
+
+  .concept img {width: 20%;}
+
+  .publishing_point {flex-wrap: wrap;}
+  .publishing_section h2 {width: 80%; font-size: 17px;}
+  .show_contents {width: 80%; margin-top: 30px;}
+  
+  .review {padding-bottom: 80px;}
   }
