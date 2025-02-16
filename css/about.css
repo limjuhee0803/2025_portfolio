@@ -60,7 +60,7 @@ body ,main {background-color: #111111;}
 .sidebar .swiper-slide { text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center; cursor: pointer; flex-direction: column;}
 .sidebar .swiper-slide img {width: 50px; margin-bottom: 10px;}
 
-.content { display: none; background-color: #F5F5F7; width: 100%; margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 700px; font-family: var(--retro-font);}
+.content { display: none; background-color: #F5F5F7; margin-top: 60px; border-radius: 20px; padding: 20px; min-height: 700px; font-family: var(--retro-font); width: 80%; margin: 60px auto 0;}
 #hobby-content { display: block; /* Default content */}
 .content p { font-size: 1.2em; }
 .content ul { margin-top: 20px; list-style-type: none;padding: 0;}
@@ -107,7 +107,6 @@ body ,main {background-color: #111111;}
 .a_txt {background-color: #fff; border: 3px solid #111111; width: 50%; margin-left: auto; margin-top: 20px;}
 
 .concept {margin-top: 20px; color: #a7a7a7; display: flex; gap: 20px;}
-/* .concept .concept_btn{display: flex; gap: 10px; align-items: center;}  */
 .concept .concept_btn {cursor: pointer;}
 .concept .concept_btn h4{ width: 25px; height: 25px; border: 2px solid #a7a7a7; border-radius: 50%; display: flex; justify-content: center; align-items: center;}
 .concept .concept_btn h5{}
@@ -171,6 +170,7 @@ body ,main {background-color: #111111;}
     display: block;
     visibility: visible;
   }
+  .content {width: 80%;}
   }
   
 
