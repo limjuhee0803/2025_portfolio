@@ -4,7 +4,7 @@ body ,main {background-color: #111111;}
 
 
 /* 메인 표지 */
-.top_interface {width: 100%; height: 100vh; position: relative; background-color: #F5F5F7;}
+.top_interface {width: 100%; height: 100dvh; position: relative; background-color: #F5F5F7;}
 .os {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%)}
 .airdrop { width: 25%; margin: 0 auto; padding-top: 9%; cursor: pointer;}
 .airdrop img {filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));}

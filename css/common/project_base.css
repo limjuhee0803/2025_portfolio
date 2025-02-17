@@ -31,7 +31,7 @@ main { margin-bottom: 230px;}
 .info_box .vision { margin-top: 50px; display: flex; flex-direction: column; gap: 20px; text-align: left;}
 .info_box .vision li{background-color: #1F1F1F; width: 60%; margin: 0 auto; padding: 20px; border-radius: 20px; color: #B7B7B7;}
 .info_box .vision li strong {margin-right: 20px; color: #fff;}
-.info_box .vision li span {color: #fff; font-family: 600;}
+.info_box .vision li span {color: #fff; font-weight: 600;}
 
 .design_system {display: flex; justify-content: center; align-items: start; gap: 15%; margin: 50px auto; width: 60%;}
 .design_system h3 {text-align: left; margin-bottom: 20px; color: #777777;}
@@ -57,6 +57,10 @@ main { margin-bottom: 230px;}
 .info04 h2 {width: 60%; margin: 50px auto 0; line-height: 1.8;}
 
 .view_project { text-align: center; color: #111111; margin: 80px auto 0;  font-size: 1rem; font-weight: bold; display: inline-block; line-height: 2; background-color: #fff; border-radius: 20px; padding: 3px 20px; transition: 0.3s;}
+
+.anglan .view_more_box {margin-top: 40%; display: flex; gap: 30px;}
+.anglan .view_more{ margin-top: 0;}
+.anglan .view_project {margin: 80px 10px 0;}
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {

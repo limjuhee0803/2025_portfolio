@@ -10,7 +10,7 @@ body ,main {background-color: #111111;}
 
 .work_section {margin-left: 5%; padding-top: 80px;}
 .work_section h1{ font-size: 2rem; font-weight: bold; }
-.work_section .workSwiper {padding: 30px 0 100px;}
+.work_section .workSwiper {padding: 30px 0 100px; padding-right: 100px;}
 .work_section .swiper-wrapper {}
 .work_section .swiper-wrapper .swiper-slide{position: relative;}
 .work_section .swiper-wrapper .swiper-slide img{border-radius: 20px;}
@@ -46,13 +46,13 @@ body ,main {background-color: #111111;}
   .mockup {height: 600px;}
   .back_font {width: 80%;}
 
-  .tab_bar { width: 80%; margin: 0 auto; gap: 6%;}
+  .tab_bar { width: 80%; margin: 0 auto; gap: 6%; padding-top: 50px;}
   .tab_bar li{}
   .tab_bar li a img{width: 80%;}
   .tab_bar li a h2{font-size: 0.8rem;}
 
-  .work_section .workSwiper {padding: 20px 0 0;}
+  .work_section .workSwiper {padding: 20px 0 0; padding-right: 50px;}
   .work_section h1 {font-size: 1.5rem;}
   .work_section .swiper-wrapper .swiper-slide h3 {font-size: 0.8rem;}
-  .work_box {padding-bottom: 50px;}
+  .work_box {padding-bottom: 80px;}
   }

@@ -1,6 +1,6 @@
 //프로젝트 스와이퍼
 var hobby_swiper = new Swiper(".workSwiper", {
-    slidesPerView: 1.5,
+    slidesPerView: 1.6,
     spaceBetween: 20,
     slideToClickedSlide : true,
     navigation:{
