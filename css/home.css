@@ -136,16 +136,6 @@
 
 /* project */
 .project { background: #111111; color: #fff; text-align: center; padding: 150px 0 100px; border-radius: 0 0 40px 40px;}
-
-/* .project .fix_contents {position: sticky; top: 36%; filter: none;}
-.project .fix_contents .mockup{position: absolute; top: -140%; left: 35%;}
-.project .fix_contents img{ margin: 0 auto; transition: 0.3s;}
-.project .fix_contents h1{ font-weight: bold; font-size: 6rem; margin-top: 10%;}
-
-.project .fix_contents.blur_effect {filter: opacity(0.2) blur(7px); transition: filter 0.3s ease;}
-
-.project .fix_contents .mockup .view_more {position: absolute; top: 40%; left: 50%; transform: translateX(-50%); filter: opacity(0); transition: 0.3s;} */
-
 .project .fix_contents { position: relative;}
 .project .fix_contents .mockup{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30%;}
 .project .fix_contents img{ margin: 0 auto; transition: 0.3s;}
@@ -198,7 +188,7 @@
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
-
+  .main_interface { border-radius: 0 0 30px 30px;}
   .top_interface .main_txt h1 {font-size: 5rem;}
   .juhee_main {width: 100%;}
   .about .about_intro .about_flex .about_text {width: 67%;}
@@ -214,7 +204,9 @@
 
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
-  .top_interface {height: 700px;}
+  .main_interface { border-radius: 0 0 20px 20px;}
+
+  .top_interface {height: 100dvh;}
 
   .top_interface .main_txt {padding-top: 40%;}
   .top_interface .main_txt h1 {font-size: 2rem;}
@@ -255,9 +247,10 @@
   .project .fix_contents.blur_effect {filter: none;}
 
   .process h1 {font-size: 1.5rem}
+  .process .process_swiper {margin-top: 30px;}
   .process .process_swiper img {width: 100%; filter: brightness(0.5);}
 
   .process .process_txt {width: 100%;}
-  .process .process_txt h3 {font-size: 0.9rem}
+  .process .process_txt h3 {font-size: 0.9rem; margin-top: 30px;}
   .process .process_swiper {margin: 50px 0 0;}
   }

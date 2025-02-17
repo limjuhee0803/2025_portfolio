@@ -16,7 +16,7 @@ body ,main {background-color: #111111;}
 /* .top_interface { position: relative; background-color: #F5F5F7;} */
 .top_interface { position: relative;}
 .old_mac {position: relative; width: 100%; height: 100vh;}
-.old_mac .mac {width: 23%; margin: 0 auto; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.old_mac .mac {width: 20%; margin: 0 auto; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .back_font {position: absolute; top: 10%; z-index: -1; left: 50%; transform: translateX(-50%); width: 36%;}
 .back_font .font{}
 
@@ -130,7 +130,8 @@ body ,main {background-color: #111111;}
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
-  .old_mac {height:800px;}
+  .main_interface { border-radius: 0 0 30px 30px;}
+  .old_mac {height: 100dvh;}
   .old_mac .mac {width: 40%; padding-top: 150px;}
   .back_font {width: 80%; top: 12%;}
 
@@ -176,9 +177,10 @@ body ,main {background-color: #111111;}
 
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
+  .main_interface { border-radius: 0 0 20px 20px;}
   .old_mac .mac {width: 75%;}
   .old_mac {height: 600px;}
-  .back_font {width: 80%;}
+  .back_font {width: 80%; top: 12%;}
   
   .about_profile {padding: 80px 0;}
   .about_profile .profile_title h2 {font-size: 0.9rem;}

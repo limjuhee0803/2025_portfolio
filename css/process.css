@@ -41,7 +41,8 @@ body ,main {background-color: #111111;}
   
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
-  .top_interface {height: 800px;}
+  .main_interface { border-radius: 0 0 30px 30px;}
+  .top_interface {height: 100dvh;}
   .os {width: 70%;}
   .airdrop {width: 30%; padding-top: 20%;}
 
@@ -58,8 +59,9 @@ body ,main {background-color: #111111;}
 
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
-  .top_interface {height: 700px;}
-  .airdrop {width: 80%; padding-top: 150px;}
+  .main_interface { border-radius: 0 0 20px 20px;}
+  .top_interface {height: 100dvh;}
+  .airdrop {width: 80%; height: 100dvh; display: flex; align-items: center;}
 
   .process_info {padding: 80px 0 0;}
   .process_info h1 {font-size: 1.5rem; margin-top: 20px;}
@@ -69,7 +71,7 @@ body ,main {background-color: #111111;}
   .vision img {width: 70%;}
 
   .point_section {width: 90%; flex-wrap: wrap;}
-  .point_section .point_box {width: 70%;}
+  .point_section .point_box {width: 90%;}
   .point_section .point_box h3 {font-size: 1.2rem; margin: 20px 0;}
 
   .concept img {width: 20%;}

@@ -113,7 +113,7 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
 /* Tablet (768px ~ 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .tablet_blind {display: none!important;}
-  .menu-bar a {font-size: 1rem;}
+  .menu-bar a {font-size: 1.2rem;}
   }
   
 /* Mobile (최대 767px) */
@@ -130,5 +130,6 @@ footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px s
   footer .footer_flex .thanks {order: 1;}
   footer .footer_flex img {margin-bottom: 30px;}
   footer .footer_link {gap: 30px;}
-  footer .footer_link li a {font-size: 0.9rem}
+  footer .footer_link li a {font-size: 0.8rem;}
+  footer .footer_flex .thanks h3 {font-size: 0.9rem;}
   }
