@@ -90,6 +90,12 @@ main { margin-bottom: 230px;}
 .catdog .color02 {background-color: #FBCA63!important;}
 .catdog .color03 {background-color: #FFFFFF!important; border: 1px solid #e4e4e4;}
 
+.solid .main_mockup {border-radius: 0; width: 70%;}
+.solid .solidSwiper {margin: 100px 0 20px; margin-left: 20%;}
+
+.solid .point_hash { display: flex;  margin-left: 20%; gap: 20px;}
+.solid .point_hash li{ color: #969696; font-size: 1rem;}
+
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
   .pc_br {display: block;}
@@ -139,4 +145,7 @@ main { margin-bottom: 230px;}
 
   .character img, .catdog_pd img {width: 85%;}
   .catdog_pd .pd_point li {width: 95%;}
+
+  .solid .main_mockup {width: 90%;}
+  .solid .solidSwiper {margin-left: 5%; margin-top: 50px;}
   }
