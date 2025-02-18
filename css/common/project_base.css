@@ -18,7 +18,7 @@ main { margin-bottom: 230px;}
 .progress_bar .rail { height: 10px; background-color: #00000094; }
 .progress_bar .bar { position: absolute; top: 0; left: 0; width: 100%; height: 10px; background-color: #777777; transform: translate3d(-100%, 0, 0); transition: transform 0.2s; animation-timing-function: cubic-bezier(0.8, 0.18, 0.24, 0.84);}
 
-.project_info {width: 80%; padding: 50px; background-color: #111111;}
+.project_info {width: 70%; padding: 50px; background-color: #111111;}
 .main_mockup {border-radius: 20px; display: block; width: 55%; margin: 100px auto 0; }
 
 .info_box {color: #fff; text-align: center; margin: 200px 0;}
@@ -61,6 +61,14 @@ main { margin-bottom: 230px;}
 .anglan .view_more_box {margin-top: 40%; display: flex; gap: 30px;}
 .anglan .view_more{ margin-top: 0;}
 .anglan .view_project {margin: 80px 10px 0;}
+.anglan .main_mockup {width: 75%;}
+
+.beteran .main_mockup {border-radius: 0; width: 50%;}
+.beteran .color01 {background-color: #FCBC1D!important;}
+.beteran .color02 {background-color: #2A6FB0!important;}
+.beteran .color03 {background-color: #000!important; border: 1px solid #2c2c2c;}
+.beteran .color04 {background-color: #fff!important;}
+.beteran .projectSwiper { margin: 50px 0; padding-left: 20%;}
 
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1024px) {
@@ -104,4 +112,8 @@ main { margin-bottom: 230px;}
   .info_box h2, .info_box .vision li, .publishing_section .show_contents, .info04 h2{width: 95%;}
 
   .back_btn {position: fixed;}
+
+  .anglan .main_mockup {width: 85%;}
+  .anglan .view_project {margin: 40px 0 0;}
+  .beteran .main_mockup {width: 70%;}
   }

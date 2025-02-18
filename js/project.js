@@ -58,3 +58,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+//프로젝트 스와이퍼
+var hobby_swiper = new Swiper(".projectSwiper", {
+  slidesPerView: 1.5,
+  spaceBetween: 20,
+  slideToClickedSlide : true,
+  navigation:{
+      nextEl:".swiper-button-next",
+      prevEl:".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3.5,
+      spaceBetween: 20.
+    }
+  }
+});
