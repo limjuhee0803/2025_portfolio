@@ -1,9 +1,8 @@
 // 새로고침 시 가장 위로 스크롤
-/*
 window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
-*/
+
 
 //부드러운 스크롤
 /*
@@ -105,30 +104,6 @@ const fadeUpObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade_up').forEach(el => fadeUpObserver.observe(el));
 
-
-
-//푸터가 시작되면 메뉴바가 사라짐
-/*
-const menuBar = document.querySelector('.menu-bar');
-const footer = document.querySelector('footer');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      menuBar.style.opacity = '0';
-      menuBar.style.visibility = 'hidden';
-      menuBar.style.pointerEvents = 'none';
-    } else {
-      menuBar.style.opacity = '1';
-      menuBar.style.visibility = 'visible';
-      menuBar.style.pointerEvents = 'auto';
-    }
-  });
-}, { threshold: 0.1 });
-
-observer.observe(footer);
-*/
-
 // main_interface의 끝에서 5% 남았을 때 메뉴바 사라지게
 window.addEventListener('scroll', function() {
   const mainInterface = document.querySelector('.main_interface');
@@ -137,10 +112,10 @@ window.addEventListener('scroll', function() {
   const scrollPosition = window.scrollY + window.innerHeight;
 
   if (scrollPosition >= mainInterface.offsetTop + mainInterfaceHeight * 0.95) {
-    menuBar.style.transition = 'opacity 0.3s ease-out'; // 부드러운 전환 추가
+    menuBar.style.transition = 'opacity 0.3s ease-out'; 
     menuBar.style.opacity = 0;
   } else {
-    menuBar.style.transition = 'opacity 0.3s ease-in'; // 부드러운 전환 추가
+    menuBar.style.transition = 'opacity 0.3s ease-in';
     menuBar.style.opacity = 1;
   }
 });

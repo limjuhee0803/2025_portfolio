@@ -55,25 +55,6 @@ document.querySelectorAll('.sidebar .swiper-slide').forEach(slide => {
 
 showContent('hobby');
 
-//sticky 되었을 때 클래스 추가
-/*
-document.addEventListener('DOMContentLoaded', function () {
-    const sidebar = document.querySelector('.sidebar');
-  
-    window.addEventListener('scroll', function () {
-      const computedStyle = getComputedStyle(sidebar);
-      const targetOffset = window.innerHeight * 0.05; // 5% 기준
-      const currentOffset = sidebar.getBoundingClientRect().top;
-  
-      // sticky 상태 + 근사값 비교로 클래스 추가
-      if (computedStyle.position === 'sticky' && Math.abs(currentOffset - targetOffset) < 1) {
-        sidebar.classList.add('change_color');
-      } else {
-        sidebar.classList.remove('change_color');
-      }
-    });
-  });
-*/
 
 //personality 마우스 이벤트
 const img1 = document.querySelector('.keyword01');

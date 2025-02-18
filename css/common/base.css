@@ -8,6 +8,10 @@
     --retro-font : 'DungGeunMo', serif;
     --bk-font: rgba(44, 44, 44, 1);
     --blue : rgba(33, 129, 250, 1);
+    --black : #2C2C2C;
+    --deep-black : #111111;
+    --light-gray : #F5F5F7;
+    --gray : #777777;
   }
 
 body {font-family: var(--en-font); overflow-x: hidden; color: var(--bk-font); word-break: keep-all;}
@@ -47,7 +51,6 @@ h1 {font-weight: bold;}
 }
 .fade_out {opacity: 1; animation: fadeOut 0.8s ease-out 3s forwards;}
 
-
 /* header */
 header { color: var(--bk-font); position: fixed; top: 0; z-index: 99; height: 50px; line-height: 50px; width: 100vw; transition: color 0.3s, background-color 0.3s;}
 header .header_flex {width: 98%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
@@ -57,9 +60,9 @@ header .header_flex {width: 98%; margin: 0 auto; display: flex; justify-content:
 .scroll-active .status {background: url('../../asset/image/status_wt.png') no-repeat center/contain;}
 
 /* menu */
-.menu-bar { padding: 0 10px; height: 50px; display: flex; justify-content: space-around; align-items: center; background-color: #ffffff; border-radius: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); z-index: 49; transition: 0.5s;}
-.menu-bar a { text-decoration: none; color: #000; font-size: 0.9rem; font-weight: bold; padding: 7px 20px; border-radius: 20px; transition: all 0.3s ease; }
-.menu-bar a.active { background-color: var(--blue); color: #ffffff;}
+.menu-bar { padding: 0 10px; height: 50px; display: flex; justify-content: space-around; align-items: center; background-color: #fff; border-radius: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); z-index: 49; transition: 0.5s;}
+.menu-bar a { text-decoration: none; color: var(--black); font-size: 0.9rem; font-weight: bold; padding: 7px 20px; border-radius: 20px; transition: all 0.3s ease; }
+.menu-bar a.active { background-color: var(--blue); color: #fff;}
 
 
 /* footer */
@@ -73,7 +76,7 @@ footer .footer_flex .contact h2{font-size: 1.8rem; font-weight: bold; margin-bot
 footer .footer_flex .contact h3{font-size: 1rem;}
 
 footer .footer_link{display: flex; gap: 3%; justify-content: center;}
-footer .footer_link li a{font-size: 0.8rem; color: #777777; border-bottom: 1px solid #777777;}
+footer .footer_link li a{font-size: 0.8rem; color: var(--gray); border-bottom: 1px solid var(--gray);}
 
 .bk_footer {background-color: #111111; color: #fff;} 
 
