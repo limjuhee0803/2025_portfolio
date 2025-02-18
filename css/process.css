@@ -12,7 +12,7 @@ body ,main {background-color: #111111;}
 .process_info {padding: 150px 0 0; text-align: center;}
 .process_info h2{font-size: 22px; }
 .process_info h1{font-size: 3rem; margin: 30px 0 0; font-family: var(--kr-font);}
-.process_info h3{font-size: 16px; font-family: var(--kr-font); color: var(--gray); width: 28%; margin: 30px auto 0; line-height: 1.6;}
+.process_info h3{font-size: 16px; font-family: var(--kr-font); color: var(--gray); width: 50%; margin: 30px auto 0; line-height: 1.6;}
 
 .vision img {width: 25%;}
 .point_section {display: flex; justify-content: center; gap: 30px; width: 50%; margin: 50px auto 0; }
@@ -29,7 +29,7 @@ body ,main {background-color: #111111;}
 .publishing_point li h3{width: auto; margin: 0; padding: 5px 20px; color: var(--gray);}
 .show_contents {width: 55%; margin: 50px auto 0;}
 .show_contents img{ border-radius: 20px;}
-.publishing_section h2 {font-size: 1rem; width: 40%; margin: 30px auto 0; line-height: 1.8;}
+.publishing_section h2 {font-size: 1rem; width: 40%; margin: 30px auto 0; line-height: 1.8; font-family: var(--kr-font);}
 
 .review {padding-bottom: 150px;} 
 
