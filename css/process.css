@@ -6,7 +6,7 @@ body ,main {background-color: #111111;}
 /* 메인 표지 */
 .top_interface {width: 100%; height: 100dvh; position: relative; background-color: var(--light-gray);}
 .os {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%)}
-.airdrop { width: 25%; margin: 0 auto; padding-top: 9%; cursor: pointer;}
+.airdrop { width: 25%; margin: 0 auto; padding-top: 9%; cursor: pointer; max-width: 500px;}
 .airdrop img {filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));}
 
 .process_info {padding: 150px 0 0; text-align: center;}
@@ -16,7 +16,7 @@ body ,main {background-color: #111111;}
 
 .vision img {width: 25%;}
 .point_section {display: flex; justify-content: center; gap: 30px; width: 50%; margin: 50px auto 0; }
-.point_section .point_box{ background-color: var(--light-gray); display: flex; flex-direction: column; padding: 30px 20px; border-radius: 20px; width: 33.3333%;}
+.point_section .point_box{ background-color: var(--light-gray); display: flex; flex-direction: column; padding: 30px 20px; border-radius: 20px; width: 33.3333%; min-width: 300px;}
 .point_section .point_box h2{background-color: var(--blue); color: #fff; padding: 5px 20px; border-radius: 10px; width: 12ch; margin: 0 auto; font-size: 1rem;}
 .point_section .point_box h3{font-size: 1.8rem; color: #111111; font-family: var(--kr-font); width: 100%; margin: 30px 0; font-weight: bold;}
 .point_section .point_box h4{font-family: var(--kr-font); line-height: 1.8; font-size: 0.9rem; color: var(--gray);}
@@ -44,7 +44,7 @@ body ,main {background-color: #111111;}
   .main_interface { border-radius: 0 0 30px 30px;}
   .top_interface {height: 100dvh;}
   .os {width: 70%;}
-  .airdrop {width: 30%; padding-top: 20%;}
+  .airdrop {width: 30%; height: 100dvh; display: flex; align-items: center; padding-top: 0; min-width: 300px;}
 
   .process_info h1 {font-size: 2rem;}
   .process_info h3 {width: 60%;}

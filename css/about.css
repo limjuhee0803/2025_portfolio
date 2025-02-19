@@ -14,7 +14,7 @@ body ,main {background-color: #111111;}
 /* 메인 표지 */
 .top_interface { position: relative;}
 .old_mac {position: relative; width: 100%; height: 100dvh;}
-.old_mac .mac {width: 20%; margin: 0 auto; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.old_mac .mac {width: 20%; margin: 0 auto; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 350px;}
 .back_font {position: absolute; top: 10%; z-index: -1; left: 50%; transform: translateX(-50%); width: 36%;}
 
 .juhee_main {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
@@ -112,7 +112,7 @@ body ,main {background-color: #111111;}
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .main_interface { border-radius: 0 0 30px 30px;}
   .old_mac {height: 100dvh;}
-  .old_mac .mac {width: 40%; padding-top: 150px;}
+  .old_mac .mac {width: 40%; padding-top: 150px; min-width: 300px;}
   .back_font {width: 80%; top: 12%;}
 
   .about_profile .profile_title h1 {font-size: 2rem;}
@@ -128,6 +128,7 @@ body ,main {background-color: #111111;}
   .container {padding: 100px 0;}
 
   .hobby_section .hobby_icon {width: 90%;}
+  .hobby_section .hobby_icon li {width: 19%;}
 
   .keyword_box {width: 80%;}
   .personality_section h4 {width: 80%;}
@@ -146,7 +147,7 @@ body ,main {background-color: #111111;}
 /* Mobile (최대 767px) */
 @media only screen and (max-width: 767px) {
   .main_interface { border-radius: 0 0 20px 20px;}
-  .old_mac .mac {width: 65%;}
+  .old_mac .mac {width: 65%; min-width: 250px;}
   .old_mac {height: 600px;}
   .back_font {width: 80%; top: 10%;}
   
