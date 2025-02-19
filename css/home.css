@@ -8,6 +8,7 @@
 .top_interface .main_txt h1 {text-align: center; font-size: 6rem; font-weight: bold; line-height: 1.3;}
 
 .juhee_main {width: 40%; margin: 0 auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.juhee_main .up_img {animation-delay: 1s;}
 
 /* 어바웃 */
 .about { width: 100%;}

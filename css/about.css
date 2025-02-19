@@ -82,6 +82,9 @@ body ,main {background-color: #111111;}
 .keyword10 {top: 61%; right: 9%;}
 .personality_section h4 {width: 70%; margin: 0 auto; line-height: 1.7; border: 3px solid var(--deep-black); border-radius: 20px; padding: 50px; margin-bottom: 60px;}
 
+.like_section {position: relative;}
+.like_section h1{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
 .skill_box {display: flex; flex-wrap: wrap; justify-content: center; padding: 2% 3% 3%;}
 .skill_box .skill_info{width: 47%; border-radius: 20px; padding: 40px; margin: 20px; border: 3px solid  var(  --deep-black);}
 .skill_box .skill_info h2{text-align: center; font-size: 1.5rem; font-weight: bold; border-bottom: #a7a7a7 1px solid; margin-bottom: 30px; padding-bottom: 15px;}
