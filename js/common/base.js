@@ -116,8 +116,10 @@ window.addEventListener('scroll', function() {
   if (scrollPosition >= mainInterface.offsetTop + mainInterfaceHeight * 0.95) {
     menuBar.style.transition = 'opacity 0.3s ease-out'; 
     menuBar.style.opacity = 0;
+    menuBar.style.pointerEvents = 'none'; // 마우스 반응 비활성화
   } else {
     menuBar.style.transition = 'opacity 0.3s ease-in';
     menuBar.style.opacity = 1;
+    menuBar.style.pointerEvents = 'auto'; // 마우스 반응 활성화
   }
 });
