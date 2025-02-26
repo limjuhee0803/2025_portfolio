@@ -113,7 +113,7 @@ window.addEventListener('scroll', function() {
   const mainInterfaceHeight = mainInterface.offsetHeight;
   const scrollPosition = window.scrollY + window.innerHeight;
 
-  if (scrollPosition >= mainInterface.offsetTop + mainInterfaceHeight * 0.95) {
+  if (scrollPosition >= mainInterface.offsetTop + mainInterfaceHeight * 0.98) {
     menuBar.style.transition = 'opacity 0.3s ease-out'; 
     menuBar.style.opacity = 0;
     menuBar.style.pointerEvents = 'none'; // 마우스 반응 비활성화
