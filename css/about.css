@@ -100,7 +100,6 @@ body ,main {background-color: #111111;}
 .concept {margin-top: 20px; color: #a7a7a7; display: flex; gap: 20px;}
 .concept .concept_btn {cursor: pointer; margin-left: 10%;}
 .concept .concept_btn h4{ width: 25px; height: 25px; border: 2px solid #a7a7a7; border-radius: 50%; display: flex; justify-content: center; align-items: center;}
-.concept .concept_btn h5{}
 
 .concept_txt {width: 30%; line-height: 1.5; max-width: 450px; font-size: 1rem; background-color:  var(--light-gray); padding: 20px; border-radius: 20px;}
 
