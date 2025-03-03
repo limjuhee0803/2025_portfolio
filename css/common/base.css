@@ -109,7 +109,7 @@ footer .footer_link li a{font-size: 0.8rem; color: var(--gray); border-bottom: 1
 /* PC (1024px 이상) */
 @media only screen and (min-width: 1025px) {
   .pc_blind {display: none!important;}
-  .view_more h2:hover {box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
+  .view_more h2:hover {box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); transform: scale(0.95);}
 
   }
   

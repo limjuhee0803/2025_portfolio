@@ -106,6 +106,8 @@
   .project .project_section .project_img:hover .view_more {filter: opacity(1);}
   .project .project_section .project_img a img {transition: 0.3s;}
   .project .project_section .project_img:hover a img {filter: brightness(0.5) blur(2px);}
+  .about .about_point .about_box li{transition: 0.3s;}
+  .about .about_point .about_box li:hover{transform: translateY(-20px);}
   }
   
 /* Tablet (768px ~ 1023px) */
